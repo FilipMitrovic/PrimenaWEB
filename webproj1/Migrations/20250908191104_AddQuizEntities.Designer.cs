@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webproj1.Infrastructure;
 
@@ -10,9 +11,11 @@ using webproj1.Infrastructure;
 namespace webproj1.Migrations
 {
     [DbContext(typeof(DbContextt))]
-    partial class DbContexttModelSnapshot : ModelSnapshot
+    [Migration("20250908191104_AddQuizEntities")]
+    partial class AddQuizEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

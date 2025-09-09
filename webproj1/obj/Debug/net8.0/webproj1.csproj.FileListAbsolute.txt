@@ -157,3 +157,4 @@ C:\Users\Filip\Desktop\PrimenaWebProjekat\webproj1\obj\Debug\net8.0\refint\webpr
 C:\Users\Filip\Desktop\PrimenaWebProjekat\webproj1\obj\Debug\net8.0\webproj1.pdb
 C:\Users\Filip\Desktop\PrimenaWebProjekat\webproj1\obj\Debug\net8.0\webproj1.genruntimeconfig.cache
 C:\Users\Filip\Desktop\PrimenaWebProjekat\webproj1\obj\Debug\net8.0\ref\webproj1.dll
+C:\Users\Filip\Desktop\PrimenaWebProjekat\webproj1\obj\Debug\net8.0\webproj1.sourcelink.json

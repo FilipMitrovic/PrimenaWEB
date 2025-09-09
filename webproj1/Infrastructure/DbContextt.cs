@@ -1,19 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using webproj1.Infrastructure.Configurations;
 using webproj1.Models;
 
 namespace webproj1.Infrastructure
 {
     public class DbContextt : DbContext
     {
-        public DbSet<User> Users { get; set; }
-
         public DbContextt(DbContextOptions options) : base(options)
         {
         }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Option> Options { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new QuizConfiguration());
+            modelBuilder.ApplyConfiguration(new QuestionConfiguration());
+            modelBuilder.ApplyConfiguration(new OptionConfiguration());
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DbContextt).Assembly);
         }
@@ -29,5 +36,6 @@ namespace webproj1.Infrastructure
         {
             return Users.FirstOrDefault(u => u.Name == name);
         }
+
     }
 }

@@ -9,6 +9,10 @@ namespace webproj1.Mapping
         {
             CreateMap<User, UserDTO>().ReverseMap(); //Kazemo mu da mapira Subject na SubjectDto i obrnuto
             CreateMap<Login, LoginDto>().ReverseMap();
+
+            CreateMap<Quiz, QuizDTO>().ReverseMap();
+            CreateMap<Question, QuestionDTO>().ReverseMap();
+            CreateMap<Option, OptionDTO>().ReverseMap();
         }
     }
 }

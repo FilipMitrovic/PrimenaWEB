@@ -10,13 +10,15 @@ const Register = () => {
     email: "",
     password: "",
     image: "",
-    role: ""
+    role: "user" // podrazumevano user
   });
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
+
     if (name === "role") {
-      setFormData({ ...formData, role: checked ? "admin" : "" });
+      // checkbox: ako je stikliran admin, inače user
+      setFormData({ ...formData, role: checked ? "admin" : "user" });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -25,7 +27,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Kreira DTO objekt za backend
       const userDto = new User(
         formData.name,
         formData.email,
@@ -36,13 +37,18 @@ const Register = () => {
 
       const res = await registerUser(userDto);
 
-      localStorage.setItem("token", res.data.token || ""); // ako backend vrati token
-      localStorage.setItem("userName", res.data.name);
-      localStorage.setItem("userEmail", res.data.email);
-      localStorage.setItem("userImage", res.data.image || "");
+      // Backend možda ne vraća token na registraciji
+      if (res.data.token) {
+        localStorage.setItem("token", res.data.token);
+      }
 
-      alert("User registered successfully");
-      navigate("/profile");
+      localStorage.setItem("userName", res.data.name || formData.name);
+      localStorage.setItem("userRole", res.data.role || formData.role);
+      localStorage.setItem("userEmail", res.data.email || formData.email);
+      localStorage.setItem("userImage", res.data.image || formData.image || "");
+
+      alert("User registered successfully please login!");
+      navigate("/login"); // ili na login stranu po potrebi
     } catch (err) {
       console.error("Register error:", err);
       if (err.response) {
@@ -59,11 +65,41 @@ const Register = () => {
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Username" onChange={handleChange} required /><br /><br />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required /><br /><br />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required /><br /><br />
-        <input type="text" name="image" placeholder="Image URL (optional)" onChange={handleChange} /><br /><br />
-
+        <input
+          type="text"
+          name="name"
+          placeholder="Username"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <br /><br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <br /><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+        <br /><br />
+        <input
+          type="text"
+          name="image"
+          placeholder="Image URL (optional)"
+          value={formData.image}
+          onChange={handleChange}
+        />
+        <br /><br />
         <label>
           <input
             type="checkbox"
@@ -73,7 +109,6 @@ const Register = () => {
           /> Become admin
         </label>
         <br /><br />
-
         <button type="submit">Register</button>
       </form>
     </div>

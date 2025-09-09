@@ -1,65 +1,50 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 using webproj1.Infrastructure;
 using webproj1.Interfaces;
 using webproj1.Mapping;
 using webproj1.Services;
-using webproj1.Controllers;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace webproj1
 {
     public class Startup
     {
+        private readonly string _cors = "cors";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        private readonly string _cors = "cors";
-
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // Dodaj servis za korisnike i kvizove
+            services.AddScoped<IUser, UserService>();
+            services.AddScoped<IQuizService, QuizService>();
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
+            // Dodaj DbContext
+            services.AddDbContext<DbContextt>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("Web2Database")));
+
+            // AutoMapper konfiguracija
+            var mapperConfig = new MapperConfiguration(mc =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web2Database", Version = "v1" });
-
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    In = ParameterLocation.Header,
-                    Description = "Please enter token",
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.Http,
-                    BearerFormat = "JWT",
-                    Scheme = "bearer"
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        new string [] { }
-                    }
-                });
-
+                mc.AddProfile(new MappingProfile());
             });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
-            services.AddDbContext<DbContextt>(options => options.UseSqlServer(Configuration.GetConnectionString("Web2Database")));
-
+            // JWT autentifikacija
             services.AddAuthentication(opt =>
             {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -67,58 +52,82 @@ namespace webproj1
             })
             .AddJwtBearer(options =>
             {
-                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = "https://localhost:5131",
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["SecretKey"]))
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(Configuration["SecretKey"]))
                 };
             });
 
+            // CORS
             services.AddCors(options =>
             {
-                options.AddPolicy(name: _cors, builder =>
+                options.AddPolicy(_cors, builder =>
                 {
                     builder.WithOrigins("http://localhost:3000")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials();
+                           .AllowAnyHeader()
+                           .AllowAnyMethod()
+                           .AllowCredentials();
                 });
             });
 
-            services.AddScoped<IUser, UserService>();
-
-            var mapperConfig = new MapperConfiguration(mc =>
+            // Kontroleri i Swagger
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
             {
-                mc.AddProfile(new MappingProfile());
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "KvizHub API", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Unesite JWT token"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
             });
-
-            IMapper mapper = mapperConfig.CreateMapper();
-            services.AddSingleton(mapper);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "web_proj1 v1"));
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "KvizHub API v1");
+                });
             }
 
             app.UseRouting();
             app.UseCors(_cors);
             app.UseAuthentication();
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-
         }
     }
 }

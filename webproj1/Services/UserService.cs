@@ -62,8 +62,12 @@ namespace webproj1.Services
                 List<Claim> claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Role, user.Role),
+                    new Claim("role", user.Role),
+                    new Claim("email", user.Email),
+                    new Claim("image", user.Image ?? "")
                 };
+
 
                 SymmetricSecurityKey secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey.Value));
                 var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);

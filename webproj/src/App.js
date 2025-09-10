@@ -9,6 +9,8 @@ import QuizDetail from "./QuizDetail";
 import QuizSolve from "./QuizSolve";
 import ProtectedRoute from "./ProtectedRoute";
 import UserProfile from "./UserProfile";
+import EditQuiz from "./EditQuiz";
+import CreateQuiz from "./CreateQuiz";
 
 function App() {
   useEffect(() => {
@@ -26,7 +28,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
+        <Route path="/quizzes" element={<QuizList />} />
+        <Route path="/quizzes/create" element={<CreateQuiz />} />
+        <Route path="/quizzes/:id/edit" element={<EditQuiz />} />
         <Route
           path="/quizzes"
           element={

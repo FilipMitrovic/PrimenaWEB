@@ -12,6 +12,7 @@ using webproj1.Infrastructure;
 using webproj1.Interfaces;
 using webproj1.Mapping;
 using webproj1.Services;
+using System.Security.Claims;
 
 namespace webproj1
 {
@@ -28,15 +29,15 @@ namespace webproj1
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Dodaj servis za korisnike i kvizove
+            // Servisi
             services.AddScoped<IUser, UserService>();
             services.AddScoped<IQuizService, QuizService>();
 
-            // Dodaj DbContext
+            // DbContext
             services.AddDbContext<DbContextt>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Web2Database")));
 
-            // AutoMapper konfiguracija
+            // AutoMapper
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -55,12 +56,15 @@ namespace webproj1
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidateAudience = true,
+                    ValidateAudience = false, // za ovaj projekat nije potreban audience
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = "https://localhost:5131",
+                    ValidIssuer = "http://localhost:5131",
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(Configuration["SecretKey"]))
+                        Encoding.UTF8.GetBytes(Configuration["SecretKey"])),
+
+                    RoleClaimType = ClaimTypes.Role,  // koristimo standardni role claim
+                    NameClaimType = ClaimTypes.Name
                 };
             });
 

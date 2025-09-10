@@ -26,11 +26,12 @@ const Login = () => {
 
       // dekodiranje tokena
       const decoded = jwtDecode(token);
+      console.log("Decoded JWT token:", decoded);
 
       localStorage.setItem("token", token);
       localStorage.setItem("userName", decoded.unique_name || formData.name);
       localStorage.setItem("userRole", decoded.role || decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || "user");
-      localStorage.setItem("userEmail", decoded.email || "");
+      localStorage.setItem("userEmail", decoded.email ||decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] ||"");
       localStorage.setItem("userImage", decoded.image || "");
 
       alert("Login successful");

@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -59,30 +60,37 @@ namespace webproj1.Services
 
             if (BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
             {
+                var roleLower = user.Role.ToLower();
+
                 List<Claim> claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.Role, user.Role),
-                    new Claim("role", user.Role),
-                    new Claim("email", user.Email),
+                    new Claim(ClaimTypes.Role, roleLower),   // ✅ samo jedan role claim
+                    new Claim(ClaimTypes.Email, user.Email),
                     new Claim("image", user.Image ?? "")
                 };
 
+                foreach (var claim in claims)
+                {
+                    Console.WriteLine($"Claim type: {claim.Type}, value: {claim.Value}");
+                }
 
                 SymmetricSecurityKey secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey.Value));
                 var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
                 var tokenOptions = new JwtSecurityToken(
-                    issuer: "http://localhost:44398",
+                    issuer: "http://localhost:5131",
+                    audience: "http://localhost:5131",
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(20),
+                    expires: DateTime.UtcNow.AddMinutes(20),
                     signingCredentials: signinCredentials
                 );
 
-                return new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+                return new JwtSecurityTokenHandler().WriteToken(tokenOptions); // ✅ i dalje string
             }
 
             return null;
         }
+
     }
 }

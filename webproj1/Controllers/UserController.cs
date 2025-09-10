@@ -47,5 +47,13 @@ namespace webproj1.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
+
+        [HttpGet("whoami")]
+        [Authorize] // dovoljno je da korisnik ima važeći token
+        public IActionResult WhoAmI()
+        {
+            var claims = User.Claims.Select(c => new { c.Type, c.Value });
+            return Ok(claims);
+        }
     }
 }

@@ -11,6 +11,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import UserProfile from "./UserProfile";
 import EditQuiz from "./EditQuiz";
 import CreateQuiz from "./CreateQuiz";
+import ManageQuestions from "./ManageQuestions";
 
 function App() {
   useEffect(() => {
@@ -25,12 +26,12 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* javno dostupne rute */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/quizzes" element={<QuizList />} />
-        <Route path="/quizzes/create" element={<CreateQuiz />} />
-        <Route path="/quizzes/:id/edit" element={<EditQuiz />} />
+
+        {/* kvizovi - korisnik mora biti ulogovan */}
         <Route
           path="/quizzes"
           element={
@@ -56,6 +57,33 @@ function App() {
           }
         />
 
+        {/* admin rute */}
+        <Route
+          path="/quizzes/create"
+          element={
+            <ProtectedRoute>
+              <CreateQuiz />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/quizzes/:id/edit"
+          element={
+            <ProtectedRoute>
+              <EditQuiz />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/quizzes/:id/manage"
+          element={
+            <ProtectedRoute>
+              <ManageQuestions />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* profil */}
         <Route
           path="/profile"
           element={
@@ -65,6 +93,7 @@ function App() {
           }
         />
 
+        {/* test ruta */}
         <Route
           path="/protected"
           element={

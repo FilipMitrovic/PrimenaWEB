@@ -33,6 +33,9 @@ namespace webproj1
             services.AddScoped<IUser, UserService>();
             services.AddScoped<IQuizService, QuizService>();
 
+            services.AddScoped<IQuestionService, QuestionService>(); 
+            services.AddScoped<IOptionService, OptionService>();
+
             // DbContext
             services.AddDbContext<DbContextt>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Web2Database")));

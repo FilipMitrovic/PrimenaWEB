@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
 import { logoutUser } from "./services/userService";
-import axios from "axios";
+
 const QuizList = () => {
   const navigate = useNavigate();
   const [quizzes, setQuizzes] = useState([]);
@@ -11,7 +11,7 @@ const QuizList = () => {
   const [difficulty, setDifficulty] = useState("");
 
   // čitamo iz localStorage podatke o korisniku
-  const role = localStorage.getItem("userRole"); // "admin" ili "User"
+  const role = localStorage.getItem("userRole"); // "admin" ili "user"
   const username = localStorage.getItem("userName");
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const QuizList = () => {
   const fetchQuizzes = async () => {
     try {
       const res = await quizService.getAllQuizzes();
-      console.log("Fetched quizzes:", res.data); // 👈 vidi strukturu
+      console.log("Fetched quizzes:", res.data);
       setQuizzes(res.data);
     } catch (err) {
       console.error("Failed to fetch quizzes:", err);
@@ -29,19 +29,6 @@ const QuizList = () => {
     }
   };
 
-  const checkWhoAmI = async () => {
-    try {
-      const res = await axios.get("http://localhost:5131/api/users/whoami", {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-      });
-      console.log("WHOAMI:", res.data);
-    } catch (err) {
-      console.error("WhoAmI error:", err);
-    }
-  };
-  
-  // u JSX dodaj privremeno
-  
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this quiz?")) return;
     try {
@@ -55,7 +42,7 @@ const QuizList = () => {
 
   const handleLogout = () => {
     logoutUser(); // briše token, userName, userRole
-    navigate("/login"); // redirektuje na login stranu
+    navigate("/login");
   };
 
   const filtered = quizzes.filter((x) => {
@@ -87,8 +74,6 @@ const QuizList = () => {
           >
             + Create Quiz
           </button>
-          <button onClick={checkWhoAmI}>WhoAmI</button>
-
         </div>
       )}
 
@@ -131,16 +116,36 @@ const QuizList = () => {
             {/* Dugmad za korisnika */}
             {role === "user" && (
               <div style={{ marginTop: 6 }}>
-                <Link to={`/quizzes/${quiz.id}`} style={{ marginRight: 8 }}>View</Link>
-                <Link to={`/quizzes/${quiz.id}/solve`} style={{ marginRight: 8 }}>Start</Link>
-                <Link to={`/results/${quiz.id}`} style={{ marginRight: 8 }}>My Results</Link>
+                <button
+                  style={{ marginRight: 8, background: "#007bff", color: "white" }}
+                  onClick={() => navigate(`/quizzes/${quiz.id}`)}
+                >
+                  View
+                </button>
+                <button
+                  style={{ marginRight: 8, background: "green", color: "white" }}
+                  onClick={() => navigate(`/quizzes/${quiz.id}/solve`)}
+                >
+                  Start
+                </button>
+                <button
+                  style={{ background: "#6f42c1", color: "white" }}
+                  onClick={() => navigate(`/results/${quiz.id}`)}
+                >
+                  My Results
+                </button>
               </div>
             )}
 
-           {/* Dugmad za admina */}
+            {/* Dugmad za admina */}
             {role === "admin" && (
               <div style={{ marginTop: 6 }}>
-                <Link to={`/quizzes/${quiz.id}`} style={{ marginRight: 8 }}>View</Link>
+                <button
+                  style={{ marginRight: 8, background: "#007bff", color: "white" }}
+                  onClick={() => navigate(`/quizzes/${quiz.id}`)}
+                >
+                  View
+                </button>
                 <button
                   style={{ marginRight: 8, background: "#ffc107" }}
                   onClick={() => navigate(`/quizzes/${quiz.id}/edit`)}
@@ -153,8 +158,18 @@ const QuizList = () => {
                 >
                   Delete
                 </button>
-                <button style={{ marginRight: 8, background: "#007bff", color: "white" }}>Manage Questions</button>
-                <button style={{ background: "#6f42c1", color: "white" }}>View Results</button>
+                <button
+                  style={{ marginRight: 8, background: "#17a2b8", color: "white" }}
+                  onClick={() => navigate(`/quizzes/${quiz.id}/manage`)}
+                >
+                  Manage Questions
+                </button>
+                <button
+                  style={{ background: "#6f42c1", color: "white" }}
+                  onClick={() => navigate(`/results/${quiz.id}`)}
+                >
+                  View Results
+                </button>
               </div>
             )}
           </li>

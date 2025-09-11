@@ -1,6 +1,4 @@
-﻿using webproj1.Models;
-
-namespace webproj1.Dto
+﻿namespace webproj1.Dto
 {
     public class OptionDTO
     {
@@ -8,7 +6,5 @@ namespace webproj1.Dto
         public string Text { get; set; }
         public bool IsCorrect { get; set; }
         public int QuestionId { get; set; }
-        public Question Question { get; set; } // navigaciona property
     }
-
 }

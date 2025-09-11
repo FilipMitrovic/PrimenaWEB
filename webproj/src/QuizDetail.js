@@ -1,12 +1,13 @@
-
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
 
 const QuizDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [quiz, setQuiz] = useState(null);
+
+  const role = localStorage.getItem("userRole"); // admin ili user
 
   useEffect(() => {
     (async () => {
@@ -24,16 +25,30 @@ const QuizDetail = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>{quiz.title}</h2>
-      <p>{quiz.description}</p>
-      <p>Category: {quiz.category}</p>
-      <p>Difficulty: {quiz.difficulty}</p>
-      <p>Questions: {quiz.questions ? quiz.questions.length : "unknown"}</p>
-      <p>Time limit: {quiz.timeLimit} seconds</p>
+      <h2>Quiz details</h2>
+      <p><strong>Quiz name:</strong> {quiz.title}</p>
+      <p><strong>Quiz Description :</strong> {quiz.description}</p>
+      <p><strong>category:</strong> {quiz.category}</p>
+      <p><strong>Difficulty:</strong> {quiz.difficulty}</p>
+      <p><strong>Number of questions:</strong> {quiz.questions ? quiz.questions.length : "unknown"}</p>
+      <p><strong>Time Limit:</strong> {quiz.timeLimit} sekundi</p>
 
-      <button onClick={() => navigate(`/quizzes/${id}/solve`)}>Start Quiz</button>
-      <br /><br />
-      <Link to="/quizzes">Back to list</Link>
+      {/* Samo korisnici vide Start dugme */}
+      {role === "user" && (
+        <button
+          style={{ background: "green", color: "white", marginRight: 8 }}
+          onClick={() => navigate(`/quizzes/${id}/solve`)}
+        >
+          Start Quiz
+        </button>
+      )}
+
+      <button
+        style={{ background: "#007bff", color: "white" }}
+        onClick={() => navigate("/quizzes")}
+      >
+        Back to list
+      </button>
     </div>
   );
 };

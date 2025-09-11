@@ -2,10 +2,11 @@
 {
     public class QuestionDTO
     {
+        public int Id { get; set; }         
         public string Text { get; set; }
-        public string Type { get; set; }
-        public List<string> Options { get; set; }
-        public string Answer { get; set; }
+        public string Type { get; set; }     
+        public int QuizId { get; set; }      
+        public List<OptionDTO> Options { get; set; } = new List<OptionDTO>();
+        public string Answer { get; set; }   
     }
-
 }

@@ -1,3 +1,4 @@
+// src/QuizList.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
@@ -55,15 +56,24 @@ const QuizList = () => {
   return (
     <div style={{ padding: 20 }}>
       {/* Header */}
+      
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h2>
-          Available Quizzes {role === "admin" && <span style={{ color: "red" }}>(admin)</span>}
-        </h2>
-        <div>
-          <span style={{ marginRight: 12 }}>Hello, {username}</span>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      </div>
+  <h2>
+    Available Quizzes {role === "admin" && <span style={{ color: "red" }}>(admin)</span>}
+  </h2>
+  <div>
+    <span style={{ marginRight: 12 }}>Hello, {username}</span>
+    {role === "user" && (
+      <button
+        style={{ marginRight: 12, background: "#6f42c1", color: "white" }}
+        onClick={() => navigate("/my-results")}
+      >
+        My Results
+      </button>
+    )}
+    <button onClick={handleLogout}>Logout</button>
+  </div>
+</div>
       
       {/* Ako je admin — prikazujemo Create dugme */}
       {role === "admin" && (
@@ -128,12 +138,7 @@ const QuizList = () => {
                 >
                   Start
                 </button>
-                <button
-                  style={{ background: "#6f42c1", color: "white" }}
-                  onClick={() => navigate(`/results/${quiz.id}`)}
-                >
-                  My Results
-                </button>
+                
               </div>
             )}
 

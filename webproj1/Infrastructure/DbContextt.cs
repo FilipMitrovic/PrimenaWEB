@@ -9,7 +9,7 @@ namespace webproj1.Infrastructure
         public DbContextt(DbContextOptions options) : base(options)
         {
         }
-
+        public DbSet<Result> Results { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Question> Questions { get; set; }
@@ -21,6 +21,8 @@ namespace webproj1.Infrastructure
             modelBuilder.ApplyConfiguration(new QuizConfiguration());
             modelBuilder.ApplyConfiguration(new QuestionConfiguration());
             modelBuilder.ApplyConfiguration(new OptionConfiguration());
+            modelBuilder.ApplyConfiguration(new ResultConfiguration());
+
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(DbContextt).Assembly);
         }

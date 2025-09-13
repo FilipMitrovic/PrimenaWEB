@@ -30,6 +30,8 @@ namespace webproj1
         public void ConfigureServices(IServiceCollection services)
         {
             // Servisi
+            services.AddScoped<IResultService, ResultService>();
+
             services.AddScoped<IUser, UserService>();
             services.AddScoped<IQuizService, QuizService>();
 

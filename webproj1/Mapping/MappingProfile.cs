@@ -13,6 +13,8 @@ namespace webproj1.Mapping
             CreateMap<Quiz, QuizDTO>().ReverseMap();
             CreateMap<Question, QuestionDTO>().ReverseMap();
             CreateMap<Option, OptionDTO>().ReverseMap();
+            CreateMap<Result, ResultDTO>().ReverseMap();
+
         }
     }
 }

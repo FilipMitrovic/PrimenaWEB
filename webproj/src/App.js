@@ -12,6 +12,10 @@ import UserProfile from "./UserProfile";
 import EditQuiz from "./EditQuiz";
 import CreateQuiz from "./CreateQuiz";
 import ManageQuestions from "./ManageQuestions";
+import MyResults from "./MyResults";
+import QuizResults from "./QuizResults";
+import ResultDetail from "./ResultDetail";
+import Leaderboard from "./Leaderboard";
 
 function App() {
   useEffect(() => {
@@ -79,6 +83,42 @@ function App() {
           element={
             <ProtectedRoute>
               <ManageQuestions />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* rezultati */}
+        <Route
+          path="/my-results"
+          element={
+            <ProtectedRoute>
+              <MyResults />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/results/:id"
+          element={
+            <ProtectedRoute>
+              <QuizResults />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/results/:id/detail"
+          element={
+            <ProtectedRoute>
+              <ResultDetail />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* leaderboard */}
+        <Route
+          path="/leaderboard/:id"
+          element={
+            <ProtectedRoute>
+              <Leaderboard />
             </ProtectedRoute>
           }
         />

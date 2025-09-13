@@ -64,8 +64,9 @@ namespace webproj1.Services
 
                 List<Claim> claims = new List<Claim>
                 {
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Name, user.Name),
-                    new Claim(ClaimTypes.Role, roleLower),   // ✅ samo jedan role claim
+                    new Claim(ClaimTypes.Role, roleLower),   
                     new Claim(ClaimTypes.Email, user.Email),
                     new Claim("image", user.Image ?? "")
                 };
@@ -86,7 +87,7 @@ namespace webproj1.Services
                     signingCredentials: signinCredentials
                 );
 
-                return new JwtSecurityTokenHandler().WriteToken(tokenOptions); // ✅ i dalje string
+                return new JwtSecurityTokenHandler().WriteToken(tokenOptions); // 
             }
 
             return null;

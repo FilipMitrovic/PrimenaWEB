@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
 import { getQuestionsByQuiz } from "./services/questionService";
 import resultService from "./services/resultService";
+
+const STORAGE_KEY = "kvizhub_attempts_v1";
 
 const QuizSolve = () => {
   const { id: quizId } = useParams();
@@ -14,6 +16,8 @@ const QuizSolve = () => {
   const [finished, setFinished] = useState(false);
   const [score, setScore] = useState(null);
 
+  const startedAtRef = useRef(null);
+
   // učitaj kviz (meta)
   useEffect(() => {
     (async () => {
@@ -21,6 +25,7 @@ const QuizSolve = () => {
         const res = await quizService.getQuizById(quizId);
         setQuiz(res.data);
         setRemaining(Number(res.data?.timeLimit || 60));
+        startedAtRef.current = new Date();
       } catch (err) {
         console.error(err);
         alert("Failed to load quiz.");
@@ -106,22 +111,71 @@ const QuizSolve = () => {
     return { correct, total, percent };
   };
 
+  // čuvanje pokušaja u localStorage
+  const saveAttemptToLocalStorage = (sc, endedAtIso, resultId) => {
+    try {
+      const prev = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+
+      const questionsSnapshot = (questions || []).map((q) => ({
+        id: q.id,
+        text: q.text,
+        type: (q.type || "").toLowerCase(),
+        options: (q.options || []).map((o) => ({
+          id: o.id,
+          text: o.text,
+          isCorrect: !!o.isCorrect,
+        })),
+        answer: q.answer ?? null,
+      }));
+
+      let durationSeconds = quiz?.timeLimit ? quiz.timeLimit - remaining : 0;
+      if (startedAtRef.current && endedAtIso) {
+        const d =
+          (new Date(endedAtIso).getTime() - startedAtRef.current.getTime()) / 1000;
+        if (isFinite(d) && d >= 0) durationSeconds = Math.round(d);
+      }
+
+      const attempt = {
+        resultId, // direktna veza sa backend rezultatom
+        quizId: Number(quizId),
+        quizTitle: quiz?.title || `Quiz #${quizId}`,
+        takenAt: endedAtIso,
+        durationSeconds,
+        correctAnswers: sc.correct,
+        totalQuestions: sc.total,
+        scorePercent: sc.percent,
+        answers: { ...answers },
+        questions: questionsSnapshot,
+      };
+
+      const next = [...prev, attempt];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    } catch (e) {
+      console.warn("Failed to write attempt to localStorage:", e);
+    }
+  };
+
   const handleSubmit = async () => {
     const sc = computeScore();
     setScore(sc);
     setFinished(true);
 
+    const endedAtIso = new Date().toISOString();
+
     try {
-      // pošalji rezultat backendu
-      await resultService.createResult({
+      const res = await resultService.createResult({
         quizId: Number(quizId),
         correctAnswers: sc.correct,
         totalQuestions: sc.total,
         scorePercent: sc.percent,
         durationSeconds: quiz?.timeLimit ? quiz.timeLimit - remaining : 0,
       });
+
+      const newResult = res.data; // backend vraća result sa id
+      saveAttemptToLocalStorage(sc, endedAtIso, newResult?.id || null);
     } catch (err) {
       console.error("Failed to save result:", err);
+      saveAttemptToLocalStorage(sc, endedAtIso, null);
     }
   };
 
@@ -237,6 +291,76 @@ const QuizSolve = () => {
             Correct: <strong>{score?.correct}</strong> / {score?.total} (
             {score?.percent}%)
           </p>
+
+          <h4>Review answers:</h4>
+          {(questions || []).map((q, idx) => {
+            const type = (q.type || "").toLowerCase();
+            const userAnswer = answers[q.id];
+
+            let isCorrect = false;
+            if (type === "single") {
+              const correctOpt = (q.options || []).find((o) => o.isCorrect);
+              isCorrect = userAnswer === correctOpt?.id;
+            } else if (type === "multiple") {
+              const chosen = new Set(Array.isArray(userAnswer) ? userAnswer : []);
+              const allCorrect = (q.options || [])
+                .filter((o) => o.isCorrect)
+                .map((o) => o.id);
+              isCorrect =
+                allCorrect.length > 0 &&
+                allCorrect.every((id) => chosen.has(id)) &&
+                [...chosen].every((id) => allCorrect.includes(id));
+            } else if (type === "truefalse" || type === "fill") {
+              const ans = String(q.answer ?? "").toLowerCase().trim();
+              const chosen = String(userAnswer ?? "").toLowerCase().trim();
+              isCorrect = ans && chosen === ans;
+            }
+
+            return (
+              <div
+                key={q.id}
+                style={{
+                  border: "1px solid #ddd",
+                  marginBottom: 10,
+                  padding: 10,
+                  background: isCorrect ? "#d4edda" : "#f8d7da",
+                }}
+              >
+                <div style={{ fontWeight: "bold" }}>
+                  {idx + 1}. {q.text}
+                </div>
+                <div>
+                  <strong>Your answer:</strong>{" "}
+                  {(() => {
+                    if (type === "single") {
+                      const chosenOpt = (q.options || []).find(
+                        (o) => o.id === userAnswer
+                      );
+                      return chosenOpt ? chosenOpt.text : "—";
+                    } else if (type === "multiple") {
+                      const chosen = Array.isArray(userAnswer) ? userAnswer : [];
+                      return (q.options || [])
+                        .filter((o) => chosen.includes(o.id))
+                        .map((o) => o.text)
+                        .join(", ") || "—";
+                    } else {
+                      return String(userAnswer || "—");
+                    }
+                  })()}
+                </div>
+                <div>
+                  <strong>Correct answer:</strong>{" "}
+                  {type === "single" || type === "multiple"
+                    ? (q.options || [])
+                        .filter((o) => o.isCorrect)
+                        .map((o) => o.text)
+                        .join(", ")
+                    : q.answer}
+                </div>
+              </div>
+            );
+          })}
+
           <button onClick={() => navigate(`/quizzes/${quizId}`)}>
             Back to quiz
           </button>

@@ -7,7 +7,7 @@ namespace webproj1.Interfaces
         Task<IEnumerable<ResultDTO>> GetResultsByQuizId(int quizId);
         Task<IEnumerable<ResultDTO>> GetResultsByUserId(int userId);
         Task<ResultDTO> GetResult(int id);
-        Task<ResultDTO> CreateResult(ResultDTO dto);
+        Task<ResultDTO> CreateResult(CreateResultDTO dto, int userId);
         Task<bool> DeleteResult(int id);
     }
 }

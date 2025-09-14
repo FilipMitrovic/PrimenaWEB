@@ -1,5 +1,4 @@
 // src/App.js
-import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
@@ -18,14 +17,7 @@ import ResultDetail from "./ResultDetail";
 import Leaderboard from "./Leaderboard";
 
 function App() {
-  useEffect(() => {
-    // Očisti token i podatke korisnika pri svakom pokretanju aplikacije
-    localStorage.removeItem("token");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("userRole");
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userImage");
-  }, []);
+  
 
   return (
     <Router>
@@ -115,7 +107,7 @@ function App() {
 
         {/* leaderboard */}
         <Route
-          path="/leaderboard/:id"
+          path="/leaderboard"
           element={
             <ProtectedRoute>
               <Leaderboard />

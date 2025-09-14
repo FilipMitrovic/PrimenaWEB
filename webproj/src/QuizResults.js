@@ -26,11 +26,17 @@ const QuizResults = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Results for Quiz #{quizId}</h2>
+      <h2>
+        Results for {results[0]?.quizTitle || `Quiz #${quizId}`}
+      </h2>
       {results.length === 0 ? (
         <p>No results found for this quiz.</p>
       ) : (
-        <table border="1" cellPadding="6" style={{ borderCollapse: "collapse" }}>
+        <table
+          border="1"
+          cellPadding="6"
+          style={{ borderCollapse: "collapse", width: "100%" }}
+        >
           <thead>
             <tr>
               <th>User</th>
@@ -44,7 +50,7 @@ const QuizResults = () => {
           <tbody>
             {results.map((r) => (
               <tr key={r.id}>
-                <td>{r.userId}</td>
+                <td>{r.userName || `User #${r.userId}`}</td>
                 <td>{r.correctAnswers}</td>
                 <td>{r.totalQuestions}</td>
                 <td>{r.scorePercent}%</td>

@@ -38,29 +38,37 @@ namespace webproj1.Controllers
             return Ok(results);
         }
 
-   
         [HttpGet("{id}")]
-        [Authorize(Roles = "admin")]
+        [Authorize]
         public async Task<IActionResult> Get(int id)
         {
             var r = await _service.GetResult(id);
             if (r == null) return NotFound();
+
+            var role = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+            var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            // ako je obican user, sme da vidi samo svoj rezultat
+            if (role == "user" && userIdClaim != null && r.UserId.ToString() != userIdClaim)
+            {
+                return Forbid();
+            }
+
             return Ok(r);
         }
 
- 
+
+
+
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create([FromBody] ResultDTO dto)
+        public async Task<IActionResult> Create([FromBody] CreateResultDTO dto)
         {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
-            if (userIdClaim == null) return Unauthorized("Invalid token");
-
-            dto.UserId = int.Parse(userIdClaim.Value);
-
-            var r = await _service.CreateResult(dto);
-            return Ok(r);
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var result = await _service.CreateResult(dto, userId);
+            return Ok(result);
         }
+
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "admin")]

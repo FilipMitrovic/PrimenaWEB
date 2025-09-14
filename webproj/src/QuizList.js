@@ -1,4 +1,3 @@
-// src/QuizList.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
@@ -11,9 +10,9 @@ const QuizList = () => {
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
 
-  // čitamo iz localStorage podatke o korisniku
   const role = localStorage.getItem("userRole"); // "admin" ili "user"
   const username = localStorage.getItem("userName");
+  const userImage = localStorage.getItem("userImage");
 
   useEffect(() => {
     fetchQuizzes();
@@ -22,7 +21,6 @@ const QuizList = () => {
   const fetchQuizzes = async () => {
     try {
       const res = await quizService.getAllQuizzes();
-      console.log("Fetched quizzes:", res.data);
       setQuizzes(res.data);
     } catch (err) {
       console.error("Failed to fetch quizzes:", err);
@@ -34,7 +32,7 @@ const QuizList = () => {
     if (!window.confirm("Are you sure you want to delete this quiz?")) return;
     try {
       await quizService.deleteQuiz(id);
-      setQuizzes((prev) => prev.filter((q) => q.id !== id)); // update state
+      setQuizzes((prev) => prev.filter((q) => q.id !== id));
     } catch (err) {
       console.error("Failed to delete quiz:", err);
       alert("Failed to delete quiz.");
@@ -42,12 +40,18 @@ const QuizList = () => {
   };
 
   const handleLogout = () => {
-    logoutUser(); // briše token, userName, userRole
+    logoutUser();
     navigate("/login");
   };
 
   const filtered = quizzes.filter((x) => {
-    if (q && !x.title?.toLowerCase().includes(q.toLowerCase())) return false;
+    const search = q.toLowerCase();
+    if (
+      search &&
+      !x.title?.toLowerCase().includes(search) &&
+      !x.description?.toLowerCase().includes(search)
+    )
+      return false;
     if (category && x.category !== category) return false;
     if (difficulty && x.difficulty !== difficulty) return false;
     return true;
@@ -56,26 +60,61 @@ const QuizList = () => {
   return (
     <div style={{ padding: 20 }}>
       {/* Header */}
-      
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-  <h2>
-    Available Quizzes {role === "admin" && <span style={{ color: "red" }}>(admin)</span>}
-  </h2>
-  <div>
-    <span style={{ marginRight: 12 }}>Hello, {username}</span>
-    {role === "user" && (
-      <button
-        style={{ marginRight: 12, background: "#6f42c1", color: "white" }}
-        onClick={() => navigate("/my-results")}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
-        My Results
-      </button>
-    )}
-    <button onClick={handleLogout}>Logout</button>
-  </div>
-</div>
-      
-      {/* Ako je admin — prikazujemo Create dugme */}
+        <h2>
+          Available Quizzes{" "}
+          {role === "admin" && <span style={{ color: "red" }}>(admin)</span>}
+        </h2>
+        <div>
+        {userImage && (
+        <img src={userImage}
+            alt="profile"
+            style={{
+            width: 40,
+            height: 40,
+            borderRadius: "50%",
+            objectFit: "cover",
+            marginRight: 8,
+            verticalAlign: "middle",
+            }}
+            />
+          )}
+          <span style={{ marginRight: 12 }}>Hello, {username}</span>
+          {role === "user" && (
+            <>
+              <button
+                style={{ marginRight: 12, background: "#6f42c1", color: "white" }}
+                onClick={() => navigate("/my-results")}
+              >
+                My Results
+              </button>
+              <button
+                style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
+                onClick={() => navigate("/leaderboard")}
+              >
+                Leaderboard
+              </button>
+            </>
+          )}
+          {role === "admin" && (
+            <button
+              style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
+              onClick={() => navigate("/leaderboard")}
+            >
+              Leaderboard
+            </button>
+          )}
+          <button onClick={handleLogout}>Logout</button>
+        </div>
+      </div>
+
+      {/* Ako je admin — Create dugme */}
       {role === "admin" && (
         <div style={{ marginBottom: 16 }}>
           <button
@@ -90,7 +129,7 @@ const QuizList = () => {
       {/* Filter sekcija */}
       <div style={{ marginBottom: 12 }}>
         <input
-          placeholder="Search by title"
+          placeholder="Search by title or description"
           value={q}
           onChange={(e) => setQ(e.target.value)}
         />
@@ -102,6 +141,8 @@ const QuizList = () => {
           <option value="">All categories</option>
           <option value="Programming">Programming</option>
           <option value="History">History</option>
+          <option value="Science">Science</option>
+          <option value="Math">Math</option>
         </select>
         <select
           value={difficulty}
@@ -118,12 +159,19 @@ const QuizList = () => {
       {/* Lista kvizova */}
       <ul>
         {filtered.map((quiz) => (
-          <li key={quiz.id} style={{ marginBottom: 16, borderBottom: "1px solid #ddd", paddingBottom: 8 }}>
+          <li
+            key={quiz.id}
+            style={{
+              marginBottom: 16,
+              borderBottom: "1px solid #ddd",
+              paddingBottom: 8,
+            }}
+          >
             <strong>{quiz.title}</strong> — {quiz.description} <br />
-            Category: {quiz.category || "—"} • Difficulty: {quiz.difficulty || "—"} • Time: {quiz.timeLimit} sec
+            Category: {quiz.category || "—"} • Difficulty:{" "}
+            {quiz.difficulty || "—"} • Time: {quiz.timeLimit} sec
             <br />
 
-            {/* Dugmad za korisnika */}
             {role === "user" && (
               <div style={{ marginTop: 6 }}>
                 <button
@@ -138,11 +186,9 @@ const QuizList = () => {
                 >
                   Start
                 </button>
-                
               </div>
             )}
 
-            {/* Dugmad za admina */}
             {role === "admin" && (
               <div style={{ marginTop: 6 }}>
                 <button

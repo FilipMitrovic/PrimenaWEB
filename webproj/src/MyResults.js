@@ -1,12 +1,12 @@
 // src/MyResults.js
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import resultService from "./services/resultService";
-import quizService from "./services/quizService";
 
 const MyResults = () => {
   const [results, setResults] = useState([]);
-  const [quizMap, setQuizMap] = useState({});
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     (async () => {
@@ -14,14 +14,6 @@ const MyResults = () => {
         // povuci moje rezultate
         const res = await resultService.getMyResults();
         setResults(res.data || []);
-
-        // povuci sve kvizove i napravi mapu id → naziv
-        const qRes = await quizService.getAllQuizzes();
-        const map = {};
-        (qRes.data || []).forEach((q) => {
-          map[q.id] = q.title;
-        });
-        setQuizMap(map);
       } catch (err) {
         console.error("Failed to fetch results:", err);
         alert("Failed to load results.");
@@ -39,7 +31,11 @@ const MyResults = () => {
       {results.length === 0 ? (
         <p>You have no results yet.</p>
       ) : (
-        <table border="1" cellPadding="6" style={{ borderCollapse: "collapse", width: "100%" }}>
+        <table
+          border="1"
+          cellPadding="6"
+          style={{ borderCollapse: "collapse", width: "100%" }}
+        >
           <thead>
             <tr>
               <th>Quiz</th>
@@ -48,17 +44,26 @@ const MyResults = () => {
               <th>Percent</th>
               <th>Duration (s)</th>
               <th>Taken At</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
             {results.map((r) => (
               <tr key={r.id}>
-                <td>{quizMap[r.quizId] || `Quiz #${r.quizId}`}</td>
+                <td>{r.quizTitle || `Quiz #${r.quizId}`}</td>
                 <td>{r.correctAnswers}</td>
                 <td>{r.totalQuestions}</td>
                 <td>{r.scorePercent}%</td>
                 <td>{r.durationSeconds}</td>
                 <td>{new Date(r.takenAt).toLocaleString()}</td>
+                <td>
+                  <button
+                    style={{ background: "#007bff", color: "white" }}
+                    onClick={() => navigate(`/results/${r.id}/detail`)}
+                  >
+                    View
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

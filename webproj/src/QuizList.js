@@ -20,8 +20,8 @@ const QuizList = () => {
 
   const fetchQuizzes = async () => {
     try {
-      const res = await quizService.getAllQuizzes();
-      setQuizzes(res.data);
+      const data = await quizService.getAllQuizzes();
+      setQuizzes(data);
     } catch (err) {
       console.error("Failed to fetch quizzes:", err);
       alert("Failed to load quizzes. Check backend/CORS.");

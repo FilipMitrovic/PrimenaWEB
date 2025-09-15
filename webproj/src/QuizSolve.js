@@ -22,9 +22,9 @@ const QuizSolve = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await quizService.getQuizById(quizId);
-        setQuiz(res.data);
-        setRemaining(Number(res.data?.timeLimit || 60));
+        const data = await quizService.getQuizById(quizId);
+        setQuiz(data);
+        setRemaining(Number(data?.timeLimit || 60));
         startedAtRef.current = new Date();
       } catch (err) {
         console.error(err);
@@ -170,9 +170,7 @@ const QuizSolve = () => {
         scorePercent: sc.percent,
         durationSeconds: quiz?.timeLimit ? quiz.timeLimit - remaining : 0,
       });
-
-      const newResult = res.data; // backend vraća result sa id
-      saveAttemptToLocalStorage(sc, endedAtIso, newResult?.id || null);
+      saveAttemptToLocalStorage(sc, endedAtIso, res?.id || null);
     } catch (err) {
       console.error("Failed to save result:", err);
       saveAttemptToLocalStorage(sc, endedAtIso, null);

@@ -23,16 +23,15 @@ const ResultDetail = () => {
     (async () => {
       try {
         const res = await resultService.getResult(resultId);
-        setResult(res.data);
-
-        if (res.data?.userId && res.data?.quizId) {
+        setResult(res);
+  
+        if (res?.userId && res?.quizId) {
           const all = await resultService.getMyResults();
-          const sameQuiz = (all.data || []).filter(
-            (r) => r.quizId === res.data.quizId
+          const sameQuiz = (all || []).filter(
+            (r) => r.quizId === res.quizId
           );
           setHistory(sameQuiz);
-        }
-
+          }
         // sada direktno tražimo u localStorage-u po resultId
         const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
         const found = (stored || []).find(

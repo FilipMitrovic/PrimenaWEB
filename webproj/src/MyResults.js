@@ -13,7 +13,7 @@ const MyResults = () => {
       try {
         // povuci moje rezultate
         const res = await resultService.getMyResults();
-        setResults(res.data || []);
+        setResults(res || []);
       } catch (err) {
         console.error("Failed to fetch results:", err);
         alert("Failed to load results.");

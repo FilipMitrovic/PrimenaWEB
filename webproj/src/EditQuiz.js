@@ -10,8 +10,8 @@ const EditQuiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const res = await quizService.getQuizById(id);
-        setQuiz(res.data);
+        const data = await quizService.getQuizById(id);
+        setQuiz(data);
       } catch (err) {
         console.error("Failed to fetch quiz:", err);
         alert("Failed to load quiz.");
@@ -27,7 +27,15 @@ const EditQuiz = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await quizService.updateQuiz(id, quiz);
+         await quizService.updateQuiz(id, {
+          id: Number(id),
+            title: quiz.title,
+            description: quiz.description,
+            category: quiz.category,
+            difficulty: quiz.difficulty,
+            timeLimit: Number(quiz.timeLimit),
+            questions: quiz.questions || []
+           });
       navigate("/quizzes");
     } catch (err) {
       console.error("Failed to update quiz:", err);

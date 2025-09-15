@@ -16,10 +16,10 @@ const Leaderboard = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await quizService.getAllQuizzes();
-        setQuizzes(res.data || []);
-        if (res.data?.length > 0) {
-          setQuizId(res.data[0].id); // default prvi kviz
+        const data = await quizService.getAllQuizzes();
+        setQuizzes(data || []);
+        if (data?.length > 0) {
+          setQuizId(data[0].id); // default prvi kviz
         }
       } catch (err) {
         console.error("Failed to fetch quizzes:", err);
@@ -35,7 +35,7 @@ const Leaderboard = () => {
       setLoading(true);
       try {
         const res = await resultService.getResultsByQuiz(quizId);
-        let data = res.data || [];
+        let data = res || [];
 
         // filtriraj po periodu
         if (period !== "all") {

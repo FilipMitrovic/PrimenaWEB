@@ -12,8 +12,8 @@ const QuizDetail = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await quizService.getQuizById(id);
-        setQuiz(res.data);
+        const data = await quizService.getQuizById(id);
+        setQuiz(data);
       } catch (err) {
         console.error(err);
         alert("Failed to load quiz.");

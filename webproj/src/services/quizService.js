@@ -1,8 +1,8 @@
-
+// src/services/quizService.js
 import axios from "axios";
+import { QuizModel } from "../models/QuizModel";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5131";
-console.log("API URL:", API_URL);
 const getToken = () => localStorage.getItem("token");
 
 const authHeaders = () => {
@@ -11,35 +11,33 @@ const authHeaders = () => {
 };
 
 const getAllQuizzes = async () => {
-    return await axios.get(`${API_URL}/api/quizzes`, {
-      headers: { Authorization: `Bearer ${getToken()}` }
-    });
-  };
-  
-  const getQuizById = async (id) => {
-    return await axios.get(`${API_URL}/api/quizzes/${id}`, {
-      headers: { Authorization: `Bearer ${getToken()}` }
-    });
-  };
-  
-  const createQuiz = async (quizData) => {
-    return await axios.post(`${API_URL}/api/quizzes`, quizData, {
-      headers: { Authorization: `Bearer ${getToken()}` }
-    });
-  };
-  
-  const updateQuiz = async (id, quizData) => {
-    return await axios.put(`${API_URL}/api/quizzes/${id}`, quizData, {
-      headers: { Authorization: `Bearer ${getToken()}` }
-    });
-  };
-  
-  const deleteQuiz = async (id) => {
-    return await axios.delete(`${API_URL}/api/quizzes/${id}`, {
-      headers: { Authorization: `Bearer ${getToken()}` }
-    });
-  };
-  
+  const res = await axios.get(`${API_URL}/api/quizzes`, { headers: authHeaders() });
+  return (res.data || []).map(
+    (q) => new QuizModel(q.id, q.title, q.description, q.category, q.difficulty, q.timeLimit)
+  );
+};
+
+const getQuizById = async (id) => {
+  const res = await axios.get(`${API_URL}/api/quizzes/${id}`, { headers: authHeaders() });
+  const q = res.data;
+  return new QuizModel(q.id, q.title, q.description, q.category, q.difficulty, q.timeLimit);
+};
+
+const createQuiz = async (quizData) => {
+  const res = await axios.post(`${API_URL}/api/quizzes`, quizData, { headers: authHeaders() });
+  const q = res.data;
+  return new QuizModel(q.id, q.title, q.description, q.category, q.difficulty, q.timeLimit);
+};
+
+const updateQuiz = async (id, quizData) => {
+  const res = await axios.put(`${API_URL}/api/quizzes/${id}`, quizData, { headers: authHeaders() });
+  const q = res.data;
+  return new QuizModel(q.id, q.title, q.description, q.category, q.difficulty, q.timeLimit);
+};
+
+const deleteQuiz = async (id) => {
+  return await axios.delete(`${API_URL}/api/quizzes/${id}`, { headers: authHeaders() });
+};
 
 export default {
   getAllQuizzes,

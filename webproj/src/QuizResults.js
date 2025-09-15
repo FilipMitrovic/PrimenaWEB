@@ -12,7 +12,7 @@ const QuizResults = () => {
     (async () => {
       try {
         const res = await resultService.getResultsByQuiz(quizId);
-        setResults(res.data || []);
+        setResults(res || []);
       } catch (err) {
         console.error("Failed to fetch results:", err);
         alert("Failed to load quiz results.");

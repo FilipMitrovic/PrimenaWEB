@@ -95,6 +95,11 @@ const QuizList = () => {
                 My Results
               </button>
               <button
+                style={{ marginRight: 12, background: "#20c997", color: "white" }}
+                onClick={() => navigate("/live/join")}>
+                Join Live
+              </button>
+              <button
                 style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
                 onClick={() => navigate("/leaderboard")}
               >
@@ -103,14 +108,22 @@ const QuizList = () => {
             </>
           )}
           {role === "admin" && (
-            <button
+            <>
+              <button
+                style={{ marginRight: 12, background: "#20c997", color: "white" }}
+                onClick={() => navigate("/live/create")}
+              >
+                Live Arena
+              </button>
+              <button
               style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
-              onClick={() => navigate("/leaderboard")}
-            >
-              Leaderboard
+              onClick={() => navigate("/leaderboard")}>
+             Leaderboard
             </button>
-          )}
+          </>
+        )}
           <button onClick={handleLogout}>Logout</button>
+
         </div>
       </div>
 

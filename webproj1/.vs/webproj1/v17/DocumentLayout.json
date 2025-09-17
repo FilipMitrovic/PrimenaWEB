@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\quizserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\quizserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,7 +166,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,19 +190,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Dto\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
-              "RelativeToolTip": "Dto\\LoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAwwCgAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:41:42.298Z"
+              "WhenOpened": "2025-09-16T14:44:19.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "ILiveQuizService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ILiveQuizService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
+              "RelativeToolTip": "Interfaces\\ILiveQuizService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:43:29.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LiveQuizHub.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\LiveQuizHub.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
+              "RelativeToolTip": "Hubs\\LiveQuizHub.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAA4wKYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:42:37.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LiveQuizService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
+              "RelativeDocumentMoniker": "Services\\LiveQuizService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
+              "RelativeToolTip": "Services\\LiveQuizService.cs",
+              "ViewState": "AQIAAAIBAAAAAAAAAAAIwBUBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:40:36.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LiveModels.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
+              "RelativeDocumentMoniker": "Models\\LiveModels.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
+              "RelativeToolTip": "Models\\LiveModels.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwEEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:38:35.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "IResultService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IResultService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IResultService.cs",
@@ -194,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "ResultController.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\ResultController.cs",
               "RelativeDocumentMoniker": "Controllers\\ResultController.cs",
@@ -206,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
@@ -214,12 +283,11 @@
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAAwD0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:03:28.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T12:03:28.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -231,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Result.cs",
               "RelativeDocumentMoniker": "Models\\Result.cs",
@@ -243,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "QuestionService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuestionService.cs",
               "RelativeDocumentMoniker": "Services\\QuestionService.cs",
@@ -255,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "QuizDTO.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\QuizDTO.cs",
               "RelativeDocumentMoniker": "Dto\\QuizDTO.cs",
@@ -263,12 +331,11 @@
               "RelativeToolTip": "Dto\\QuizDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:13:52.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T18:13:52.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ResultDTO.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\ResultDTO.cs",
               "RelativeDocumentMoniker": "Dto\\ResultDTO.cs",
@@ -276,12 +343,11 @@
               "RelativeToolTip": "Dto\\ResultDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:20:05.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T10:20:05.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\UserDTO.cs",
               "RelativeDocumentMoniker": "Dto\\UserDTO.cs",
@@ -293,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Quiz.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Quiz.cs",
               "RelativeDocumentMoniker": "Models\\Quiz.cs",
@@ -301,25 +367,47 @@
               "RelativeToolTip": "Models\\Quiz.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:11:36.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T18:11:36.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Mapping\\MappingProfile.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:28:01.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Dto\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
+              "RelativeToolTip": "Dto\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T15:41:42.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CreateResultDTO.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
               "RelativeDocumentMoniker": "Dto\\CreateResultDTO.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
               "RelativeToolTip": "Dto\\CreateResultDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T15:47:29.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T15:47:29.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "QuizSerivce.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuizSerivce.cs",
               "RelativeDocumentMoniker": "Services\\QuizSerivce.cs",
@@ -331,19 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Mapping\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:28:01.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ResultService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\ResultService.cs",
               "RelativeDocumentMoniker": "Services\\ResultService.cs",
@@ -355,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "OptionDTO.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\OptionDTO.cs",
               "RelativeDocumentMoniker": "Dto\\OptionDTO.cs",
@@ -367,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "IQuizService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuizService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IQuizService.cs",
@@ -379,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "IQuestionService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuestionService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IQuestionService.cs",
@@ -391,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "IOptionService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IOptionService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IOptionService.cs",
@@ -403,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "IUser.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IUser.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUser.cs",
@@ -415,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "QuestionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuestionConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuestionConfiguration.cs",
@@ -427,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Option.cs",
               "RelativeDocumentMoniker": "Models\\Option.cs",
@@ -439,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Question.cs",
               "RelativeDocumentMoniker": "Models\\Question.cs",
@@ -451,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
@@ -463,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
@@ -475,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "OptionController.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\OptionController.cs",
               "RelativeDocumentMoniker": "Controllers\\OptionController.cs",
@@ -487,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "OptionService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\OptionService.cs",
               "RelativeDocumentMoniker": "Services\\OptionService.cs",
@@ -499,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Login.cs",
               "RelativeDocumentMoniker": "Models\\Login.cs",
@@ -511,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -523,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "OptionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\OptionConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configurations\\OptionConfiguration.cs",
@@ -535,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -547,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -559,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "QuizConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuizConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuizConfiguration.cs",
@@ -571,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "UserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\UserConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configurations\\UserConfiguration.cs",

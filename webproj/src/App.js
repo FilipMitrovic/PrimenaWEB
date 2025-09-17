@@ -15,6 +15,9 @@ import MyResults from "./MyResults";
 import QuizResults from "./QuizResults";
 import ResultDetail from "./ResultDetail";
 import Leaderboard from "./Leaderboard";
+import LiveCreateRoom from "./live/LiveCreateRoom";
+import LiveArena from "./live/LiveArena";
+import LiveJoin from "./live/LiveJoin";
 
 function App() {
   
@@ -134,6 +137,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/live/create" element={<LiveCreateRoom />} />
+        <Route path="/live/arena/:roomCode" element={<LiveArena />} />
+        <Route path="/live/join" element={<LiveJoin />} />
       </Routes>
     </Router>
   );

@@ -8,11 +8,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using System.Security.Claims;
 using webproj1.Infrastructure;
 using webproj1.Interfaces;
 using webproj1.Mapping;
 using webproj1.Services;
-using System.Security.Claims;
+using webproj1.Hubs; // za LiveQuizHub
 
 namespace webproj1
 {
@@ -29,15 +30,15 @@ namespace webproj1
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Servisi
+            // Servisi (postojeći)
             services.AddScoped<IResultService, ResultService>();
-
             services.AddScoped<IUser, UserService>();
             services.AddScoped<IQuizService, QuizService>();
-
-            services.AddScoped<IQuestionService, QuestionService>(); 
+            services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<IOptionService, OptionService>();
 
+            // Live Quiz servis (novi)
+            services.AddSingleton<ILiveQuizService, LiveQuizService>();
             // DbContext
             services.AddDbContext<DbContextt>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Web2Database")));
@@ -61,15 +62,30 @@ namespace webproj1
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidateAudience = false, // za ovaj projekat nije potreban audience
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = "http://localhost:5131",
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(Configuration["SecretKey"])),
 
-                    RoleClaimType = ClaimTypes.Role,  // koristimo standardni role claim
+                    RoleClaimType = ClaimTypes.Role,
                     NameClaimType = ClaimTypes.Name
+                };
+
+                // omogući token preko query string-a za SignalR WebSocket
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        var accessToken = context.Request.Query["access_token"];
+                        var path = context.HttpContext.Request.Path;
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs/live"))
+                        {
+                            context.Token = accessToken;
+                        }
+                        return System.Threading.Tasks.Task.CompletedTask;
+                    }
                 };
             });
 
@@ -114,6 +130,9 @@ namespace webproj1
                     }
                 });
             });
+
+            // SignalR
+            services.AddSignalR();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -136,6 +155,8 @@ namespace webproj1
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                // Live Arena hub
+                endpoints.MapHub<LiveQuizHub>("/hubs/live");
             });
         }
     }

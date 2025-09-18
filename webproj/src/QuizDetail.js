@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
+import { getQuestionsByQuiz } from "./services/questionService"; // 👈 dodato
+import "./QuizDetail.css";
 
 const QuizDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [quiz, setQuiz] = useState(null);
+  const [questionCount, setQuestionCount] = useState(null); // 👈 broj pitanja
 
   const role = localStorage.getItem("userRole"); // "admin" ili "user"
 
@@ -21,34 +24,48 @@ const QuizDetail = () => {
     })();
   }, [id]);
 
-  if (!quiz) return <div style={{ padding: 20 }}>Loading...</div>;
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getQuestionsByQuiz(id);
+        setQuestionCount(res.data?.length || 0);
+      } catch (err) {
+        console.error("Failed to fetch questions:", err);
+      }
+    })();
+  }, [id]);
+
+  if (!quiz) return <div className="quizdetail-container">Loading...</div>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="quizdetail-container">
       <h2>Quiz details</h2>
-      <p><strong>Quiz name:</strong> {quiz.title}</p>
-      <p><strong>Description:</strong> {quiz.description}</p>
-      <p><strong>Category:</strong> {quiz.category}</p>
-      <p><strong>Difficulty:</strong> {quiz.difficulty}</p>
-      <p><strong>Number of questions:</strong> {quiz.questions ? quiz.questions.length : "unknown"}</p>
-      <p><strong>Time Limit:</strong> {quiz.timeLimit} seconds</p>
+      <div className="quizdetail-info">
+        <p><strong>Quiz name:</strong> {quiz.title}</p>
+        <p><strong>Description:</strong> {quiz.description}</p>
+        <p><strong>Category:</strong> {quiz.category}</p>
+        <p><strong>Difficulty:</strong> {quiz.difficulty}</p>
+        <p><strong>Number of questions:</strong> {questionCount ?? "—"}</p>
+        <p><strong>Time Limit:</strong> {quiz.timeLimit} seconds</p>
+      </div>
 
-      {role === "user" && (
+      <div className="quizdetail-buttons">
+        {role === "user" && (
+          <button
+            className="btn btn-start"
+            onClick={() => navigate(`/quizzes/${id}/solve`)}
+          >
+            Start Quiz
+          </button>
+        )}
+
         <button
-          style={{ background: "green", color: "white", marginRight: 8 }}
-          onClick={() => navigate(`/quizzes/${id}/solve`)}
+          className="btn btn-back"
+          onClick={() => navigate("/quizzes")}
         >
-          Start Quiz
+          Back to list
         </button>
-      )}
-
-      <br /><br />
-      <button
-        style={{ background: "#007bff", color: "white" }}
-        onClick={() => navigate("/quizzes")}
-      >
-        Back to list
-      </button>
+      </div>
     </div>
   );
 };

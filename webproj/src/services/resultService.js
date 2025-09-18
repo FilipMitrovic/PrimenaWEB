@@ -1,4 +1,4 @@
-// src/services/resultService.js
+
 import axios from "axios";
 import { ResultModel } from "../models/ResultModel";
 
@@ -10,7 +10,7 @@ const authHeaders = () => {
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
-// CREATE → koristi CreateResultDTO (plain object), vraća ResultModel
+
 const createResult = async (data) => {
   const res = await axios.post(`${API_URL}/api/Result`, data, {
     headers: authHeaders(),

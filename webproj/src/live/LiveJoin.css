@@ -1,0 +1,36 @@
+.livejoin-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .livejoin-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .livejoin-container input {
+    margin: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 80%;
+  }
+  
+  .livejoin-container button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #20c997;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .livejoin-container button:hover {
+    background: #198754;
+  }
+  

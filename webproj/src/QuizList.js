@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
 import { logoutUser } from "./services/userService";
+import "./QuizList.css";  
 
 const QuizList = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const QuizList = () => {
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
 
-  const role = localStorage.getItem("userRole"); // "admin" ili "user"
+  const role = localStorage.getItem("userRole");
   const username = localStorage.getItem("userName");
   const userImage = localStorage.getItem("userImage");
 
@@ -58,110 +59,59 @@ const QuizList = () => {
   });
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="quizlist-container">
       {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <div className="quizlist-header">
         <h2>
           Available Quizzes{" "}
-          {role === "admin" && <span style={{ color: "red" }}>(admin)</span>}
+          {role === "admin" && <span style={{ color: "#ffc107" }}>(admin)</span>}
         </h2>
         <div>
-        {userImage && (
-        <img src={userImage}
-            alt="profile"
-            style={{
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            objectFit: "cover",
-            marginRight: 8,
-            verticalAlign: "middle",
-            }}
-            />
-          )}
-          <span style={{ marginRight: 12 }}>Hello, {username}</span>
+          {userImage && <img src={userImage} alt="profile" />}
+          <span style={{ marginRight: 12, fontWeight: "bold" }}>
+            Hello, {username}
+          </span>
           {role === "user" && (
             <>
-              <button
-                style={{ marginRight: 12, background: "#6f42c1", color: "white" }}
-                onClick={() => navigate("/my-results")}
-              >
-                My Results
-              </button>
-              <button
-                style={{ marginRight: 12, background: "#20c997", color: "white" }}
-                onClick={() => navigate("/live/join")}>
-                Join Live
-              </button>
-              <button
-                style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
-                onClick={() => navigate("/leaderboard")}
-              >
-                Leaderboard
-              </button>
+              <button className="btn btn-purple" onClick={() => navigate("/my-results")}>My Results</button>
+              <button className="btn btn-teal" onClick={() => navigate("/live/join")}>Join Live</button>
+              <button className="btn btn-info" onClick={() => navigate("/leaderboard")}>Leaderboard</button>
             </>
           )}
           {role === "admin" && (
             <>
-              <button
-                style={{ marginRight: 12, background: "#20c997", color: "white" }}
-                onClick={() => navigate("/live/create")}
-              >
-                Live Arena
-              </button>
-              <button
-              style={{ marginRight: 12, background: "#17a2b8", color: "white" }}
-              onClick={() => navigate("/leaderboard")}>
-             Leaderboard
-            </button>
-          </>
-        )}
-          <button onClick={handleLogout}>Logout</button>
-
+              <button className="btn btn-teal" onClick={() => navigate("/live/create")}>Live Arena</button>
+              <button className="btn btn-info" onClick={() => navigate("/leaderboard")}>Leaderboard</button>
+            </>
+          )}
+          <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
         </div>
       </div>
 
       {/* Ako je admin — Create dugme */}
       {role === "admin" && (
         <div style={{ marginBottom: 16 }}>
-          <button
-            style={{ background: "green", color: "white", padding: "6px 12px" }}
-            onClick={() => navigate("/quizzes/create")}
-          >
+          <button className="btn btn-success" onClick={() => navigate("/quizzes/create")}>
             + Create Quiz
           </button>
         </div>
       )}
 
       {/* Filter sekcija */}
-      <div style={{ marginBottom: 12 }}>
+      <div className="quizlist-filters">
         <input
           placeholder="Search by title or description"
           value={q}
           onChange={(e) => setQ(e.target.value)}
         />
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          style={{ marginLeft: 8 }}
-        >
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">All categories</option>
           <option value="Programming">Programming</option>
           <option value="History">History</option>
           <option value="Science">Science</option>
           <option value="Math">Math</option>
         </select>
-        <select
-          value={difficulty}
-          onChange={(e) => setDifficulty(e.target.value)}
-          style={{ marginLeft: 8 }}
-        >
+        <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
           <option value="">All difficulties</option>
           <option value="easy">easy</option>
           <option value="medium">medium</option>
@@ -170,75 +120,35 @@ const QuizList = () => {
       </div>
 
       {/* Lista kvizova */}
-      <ul>
+      <div className="quizlist-grid">
         {filtered.map((quiz) => (
-          <li
-            key={quiz.id}
-            style={{
-              marginBottom: 16,
-              borderBottom: "1px solid #ddd",
-              paddingBottom: 8,
-            }}
-          >
-            <strong>{quiz.title}</strong> — {quiz.description} <br />
-            Category: {quiz.category || "—"} • Difficulty:{" "}
-            {quiz.difficulty || "—"} • Time: {quiz.timeLimit} sec
-            <br />
-
-            {role === "user" && (
-              <div style={{ marginTop: 6 }}>
-                <button
-                  style={{ marginRight: 8, background: "#007bff", color: "white" }}
-                  onClick={() => navigate(`/quizzes/${quiz.id}`)}
-                >
-                  View
-                </button>
-                <button
-                  style={{ marginRight: 8, background: "green", color: "white" }}
-                  onClick={() => navigate(`/quizzes/${quiz.id}/solve`)}
-                >
-                  Start
-                </button>
-              </div>
-            )}
-
-            {role === "admin" && (
-              <div style={{ marginTop: 6 }}>
-                <button
-                  style={{ marginRight: 8, background: "#007bff", color: "white" }}
-                  onClick={() => navigate(`/quizzes/${quiz.id}`)}
-                >
-                  View
-                </button>
-                <button
-                  style={{ marginRight: 8, background: "#ffc107" }}
-                  onClick={() => navigate(`/quizzes/${quiz.id}/edit`)}
-                >
-                  Update
-                </button>
-                <button
-                  style={{ marginRight: 8, background: "red", color: "white" }}
-                  onClick={() => handleDelete(quiz.id)}
-                >
-                  Delete
-                </button>
-                <button
-                  style={{ marginRight: 8, background: "#17a2b8", color: "white" }}
-                  onClick={() => navigate(`/quizzes/${quiz.id}/manage`)}
-                >
-                  Manage Questions
-                </button>
-                <button
-                  style={{ background: "#6f42c1", color: "white" }}
-                  onClick={() => navigate(`/results/${quiz.id}`)}
-                >
-                  View Results
-                </button>
-              </div>
-            )}
-          </li>
+          <div key={quiz.id} className="quiz-card">
+            <h3>{quiz.title}</h3>
+            <p>{quiz.description}</p>
+            <small>
+              Category: <b>{quiz.category || "—"}</b> • Difficulty:{" "}
+              <b>{quiz.difficulty || "—"}</b> • Time: {quiz.timeLimit} sec
+            </small>
+            <div style={{ marginTop: 10 }}>
+              {role === "user" && (
+                <>
+                  <button className="btn btn-primary" onClick={() => navigate(`/quizzes/${quiz.id}`)}>View</button>
+                  <button className="btn btn-success" onClick={() => navigate(`/quizzes/${quiz.id}/solve`)}>Start</button>
+                </>
+              )}
+              {role === "admin" && (
+                <>
+                  <button className="btn btn-primary" onClick={() => navigate(`/quizzes/${quiz.id}`)}>View</button>
+                  <button className="btn btn-warning" onClick={() => navigate(`/quizzes/${quiz.id}/edit`)}>Update</button>
+                  <button className="btn btn-danger" onClick={() => handleDelete(quiz.id)}>Delete</button>
+                  <button className="btn btn-info" onClick={() => navigate(`/quizzes/${quiz.id}/manage`)}>Manage Questions</button>
+                  <button className="btn btn-purple" onClick={() => navigate(`/results/${quiz.id}`)}>View Results</button>
+                </>
+              )}
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.home-container {
+    text-align: center;
+    margin-top: 80px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-container h1 {
+    margin-bottom: 30px;
+  }
+  
+  .home-container .btn {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { loginUser } from "./services/userService";
 import { LoginDTO } from "./models/LoginDTO";
 import { jwtDecode } from "jwt-decode";
+import "./Auth.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,14 +25,13 @@ const Login = () => {
         return;
       }
 
-      // dekodiranje tokena
       const decoded = jwtDecode(token);
       console.log("Decoded JWT token:", decoded);
 
       localStorage.setItem("token", token);
       localStorage.setItem("userName", decoded.unique_name || formData.name);
       localStorage.setItem("userRole", decoded.role || decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || "user");
-      localStorage.setItem("userEmail", decoded.email ||decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] ||"");
+      localStorage.setItem("userEmail", decoded.email || decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] ||"");
       localStorage.setItem("userImage", decoded.image || "");
 
       alert("Login successful");
@@ -49,29 +49,15 @@ const Login = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div className="auth-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Username or Email"
-          onChange={handleChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          onChange={handleChange}
-          required
-        />
-        <br /><br />
-        <button type="submit">Login</button>
+        <input type="text" name="name" placeholder="Username or Email" onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
+        <button type="submit" className="btn btn-success">Login</button>
       </form>
       <br />
-      <button onClick={() => navigate("/register")}>Register</button>
+      <button className="btn btn-primary" onClick={() => navigate("/register")}>Register</button>
     </div>
   );
 };

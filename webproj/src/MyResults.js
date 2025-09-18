@@ -1,7 +1,8 @@
-// src/MyResults.js
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import resultService from "./services/resultService";
+import "./MyResults.css";
 
 const MyResults = () => {
   const [results, setResults] = useState([]);
@@ -11,7 +12,6 @@ const MyResults = () => {
   useEffect(() => {
     (async () => {
       try {
-        // povuci moje rezultate
         const res = await resultService.getMyResults();
         setResults(res || []);
       } catch (err) {
@@ -23,19 +23,15 @@ const MyResults = () => {
     })();
   }, []);
 
-  if (loading) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (loading) return <div className="myresults-container">Loading...</div>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="myresults-container">
       <h2>My Results</h2>
       {results.length === 0 ? (
-        <p>You have no results yet.</p>
+        <p className="myresults-empty">You have no results yet.</p>
       ) : (
-        <table
-          border="1"
-          cellPadding="6"
-          style={{ borderCollapse: "collapse", width: "100%" }}
-        >
+        <table className="myresults-table">
           <thead>
             <tr>
               <th>Quiz</th>
@@ -57,10 +53,7 @@ const MyResults = () => {
                 <td>{r.durationSeconds}</td>
                 <td>{new Date(r.takenAt).toLocaleString()}</td>
                 <td>
-                  <button
-                    style={{ background: "#007bff", color: "white" }}
-                    onClick={() => navigate(`/results/${r.id}/detail`)}
-                  >
+                  <button onClick={() => navigate(`/results/${r.id}/detail`)}>
                     View
                   </button>
                 </td>

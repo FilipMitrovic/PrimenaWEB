@@ -25,12 +25,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* javno dostupne rute */}
+      
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* kvizovi - korisnik mora biti ulogovan */}
+     
         <Route
           path="/quizzes"
           element={

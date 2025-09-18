@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import resultService from "./services/resultService";
@@ -10,6 +11,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
+import "./ResultDetail.css";
 
 const STORAGE_KEY = "kvizhub_attempts_v1";
 
@@ -24,15 +26,15 @@ const ResultDetail = () => {
       try {
         const res = await resultService.getResult(resultId);
         setResult(res);
-  
+
         if (res?.userId && res?.quizId) {
           const all = await resultService.getMyResults();
           const sameQuiz = (all || []).filter(
             (r) => r.quizId === res.quizId
           );
           setHistory(sameQuiz);
-          }
-        // sada direktno tražimo u localStorage-u po resultId
+        }
+
         const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
         const found = (stored || []).find(
           (a) => String(a.resultId) === String(resultId)
@@ -47,7 +49,7 @@ const ResultDetail = () => {
     })();
   }, [resultId]);
 
-  if (!result) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (!result) return <div className="resultdetail-container">Loading...</div>;
 
   const renderLocalQuestions = () => {
     if (!localAttempt) return null;
@@ -104,12 +106,9 @@ const ResultDetail = () => {
       return (
         <div
           key={q.id}
-          style={{
-            border: "1px solid #ddd",
-            marginBottom: 10,
-            padding: 10,
-            background: isCorrect ? "#d4edda" : "#f8d7da",
-          }}
+          className={`resultdetail-question ${
+            isCorrect ? "correct" : "incorrect"
+          }`}
         >
           <div style={{ fontWeight: "bold" }}>
             {idx + 1}. {q.text}
@@ -126,53 +125,39 @@ const ResultDetail = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="resultdetail-container">
       <h2>Result Detail</h2>
-      <p>
-        <strong>Quiz:</strong> {result.quizTitle || `Quiz #${result.quizId}`}
-      </p>
-      <p>
-        <strong>User:</strong> {result.userName || `User #${result.userId}`}
-      </p>
-      <p>
-        <strong>Correct:</strong> {result.correctAnswers}
-      </p>
-      <p>
-        <strong>Total:</strong> {result.totalQuestions}
-      </p>
-      <p>
-        <strong>Score:</strong> {result.scorePercent}%
-      </p>
-      <p>
-        <strong>Duration:</strong> {result.durationSeconds} seconds
-      </p>
-      <p>
-        <strong>Taken At:</strong>{" "}
-        {new Date(result.takenAt).toLocaleString()}
-      </p>
+      <div className="resultdetail-info">
+        <p><strong>Quiz:</strong> {result.quizTitle || `Quiz #${result.quizId}`}</p>
+        <p><strong>User:</strong> {result.userName || `User #${result.userId}`}</p>
+        <p><strong>Correct:</strong> {result.correctAnswers}</p>
+        <p><strong>Total:</strong> {result.totalQuestions}</p>
+        <p><strong>Score:</strong> {result.scorePercent}%</p>
+        <p><strong>Duration:</strong> {result.durationSeconds} seconds</p>
+        <p><strong>Taken At:</strong> {new Date(result.takenAt).toLocaleString()}</p>
+      </div>
 
-      <h3>Questions Review</h3>
-      {result.answers ? (
-        Object.entries(result.answers).map(([qId, answer]) => (
-          <div
-            key={qId}
-            style={{ border: "1px solid #ddd", marginBottom: 10, padding: 10 }}
-          >
-            <div>
-              <strong>Question ID {qId}:</strong> Your answer: {String(answer)}
+      <div className="resultdetail-questions">
+        <h3>Questions Review</h3>
+        {result.answers ? (
+          Object.entries(result.answers).map(([qId, answer]) => (
+            <div key={qId} className="resultdetail-question">
+              <div>
+                <strong>Question ID {qId}:</strong> Your answer: {String(answer)}
+              </div>
             </div>
-          </div>
-        ))
-      ) : localAttempt ? (
-        renderLocalQuestions()
-      ) : (
-        <p style={{ color: "gray" }}>
-          OVDE STOJE LISTE PITANJA I ODGOVORA KORISNIKA
-        </p>
-      )}
+          ))
+        ) : localAttempt ? (
+          renderLocalQuestions()
+        ) : (
+          <p style={{ color: "gray" }}>
+            OVDE STOJE LISTE PITANJA I ODGOVORA KORISNIKA
+          </p>
+        )}
+      </div>
 
       {history.length > 1 && (
-        <div style={{ marginTop: 30 }}>
+        <div className="resultdetail-chart">
           <h3>Progress Over Attempts</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart

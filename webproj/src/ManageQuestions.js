@@ -1,14 +1,15 @@
 
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom"; //
+import { useParams, useNavigate } from "react-router-dom";
 import { getQuestionsByQuiz, createQuestion, deleteQuestion } from "./services/questionService";
 import { createOption, deleteOption } from "./services/optionService";
+import "./ManageQuestions.css";
 
 const emptyQ = { text: "", type: "single", quizId: 0, answer: "", options: [] };
 
 const ManageQuestions = () => {
   const { id: quizId } = useParams();
-  const navigate = useNavigate(); // 
+  const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
   const [form, setForm] = useState({ ...emptyQ, quizId: Number(quizId) });
 
@@ -38,17 +39,14 @@ const ManageQuestions = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="manage-container">
       <h2>Manage Questions (Quiz #{quizId})</h2>
-      <button
-        style={{ background: "#007bff", color: "white", marginBottom: 12 }}
-        onClick={() => navigate(`/quizzes/${quizId}`)}
-      >
+      <button className="manage-back" onClick={() => navigate(`/quizzes/${quizId}`)}>
         Back
       </button>
 
       {/* Forma za dodavanje pitanja */}
-      <form onSubmit={addQuestion} style={{ marginTop: 16, marginBottom: 24 }}>
+      <form onSubmit={addQuestion} className="manage-form">
         <input
           placeholder="Question text"
           value={form.text}
@@ -58,7 +56,6 @@ const ManageQuestions = () => {
         <select
           value={form.type}
           onChange={(e) => setForm({ ...form, type: e.target.value })}
-          style={{ marginLeft: 8 }}
         >
           <option value="single">single</option>
           <option value="multiple">multiple</option>
@@ -67,18 +64,17 @@ const ManageQuestions = () => {
         </select>
         {(form.type === "fill" || form.type === "truefalse") && (
           <input
-            style={{ marginLeft: 8 }}
             placeholder={form.type === "fill" ? "Correct text answer" : "true/false"}
             value={form.answer}
             onChange={(e) => setForm({ ...form, answer: e.target.value })}
           />
         )}
-        <button type="submit" style={{ marginLeft: 8 }}>Add Question</button>
+        <button type="submit">Add Question</button>
       </form>
 
       {/* Lista pitanja */}
       {questions.map((q) => (
-        <div key={q.id} style={{ border: "1px solid #ddd", padding: 12, marginBottom: 12 }}>
+        <div key={q.id} className="manage-question-card">
           <div><strong>Q#{q.id}</strong> [{q.type}] {q.text}</div>
           {["fill", "truefalse"].includes((q.type || "").toLowerCase()) && (
             <div>Answer: {q.answer}</div>
@@ -86,7 +82,6 @@ const ManageQuestions = () => {
           <div style={{ marginTop: 8 }}>
             <button onClick={() => addOption(q.id)}>+ Add Option</button>
             <button
-              style={{ marginLeft: 8, color: "white", background: "red" }}
               onClick={async () => {
                 if (window.confirm("Delete question?")) {
                   await deleteQuestion(q.id);
@@ -97,12 +92,11 @@ const ManageQuestions = () => {
               Delete Question
             </button>
           </div>
-          <ul style={{ marginTop: 8 }}>
+          <ul className="manage-options">
             {(q.options || []).map((o) => (
               <li key={o.id}>
                 {o.text} {o.isCorrect ? "(correct)" : ""}
                 <button
-                  style={{ marginLeft: 8 }}
                   onClick={async () => {
                     if (window.confirm("Delete option?")) {
                       await deleteOption(o.id);

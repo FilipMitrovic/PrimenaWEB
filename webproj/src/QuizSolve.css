@@ -1,0 +1,59 @@
+.quizsolve-container {
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f2f5, #ffffff);
+    font-family: Arial, sans-serif;
+  }
+  
+  .quizsolve-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .timer {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .question-card {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .question-card strong {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .question-card label {
+    display: block;
+    margin: 4px 0;
+    cursor: pointer;
+  }
+  
+  .question-card input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .review-card {
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .review-card.correct {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .review-card.wrong {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  

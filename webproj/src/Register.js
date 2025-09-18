@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "./services/userService";
 import User from "./models/User";
+import "./Auth.css";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -10,14 +11,12 @@ const Register = () => {
     email: "",
     password: "",
     image: "",
-    role: "user" // podrazumevano user
+    role: "user"
   });
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
-
     if (name === "role") {
-      // checkbox: ako je stikliran admin, inače user
       setFormData({ ...formData, role: checked ? "admin" : "user" });
     } else {
       setFormData({ ...formData, [name]: value });
@@ -37,7 +36,6 @@ const Register = () => {
 
       const res = await registerUser(userDto);
 
-      // Backend možda ne vraća token na registraciji
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
       }
@@ -48,7 +46,7 @@ const Register = () => {
       localStorage.setItem("userImage", res.data.image || formData.image || "");
 
       alert("User registered successfully please login!");
-      navigate("/login"); // ili na login stranu po potrebi
+      navigate("/login");
     } catch (err) {
       console.error("Register error:", err);
       if (err.response) {
@@ -62,54 +60,17 @@ const Register = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div className="auth-container">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Username"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="text"
-          name="image"
-          placeholder="Image URL (optional)"
-          value={formData.image}
-          onChange={handleChange}
-        />
-        <br /><br />
+        <input type="text" name="name" placeholder="Username" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+        <input type="text" name="image" placeholder="Image URL (optional)" value={formData.image} onChange={handleChange} />
         <label>
-          <input
-            type="checkbox"
-            name="role"
-            checked={formData.role === "admin"}
-            onChange={handleChange}
-          /> Become admin
+          <input type="checkbox" name="role" checked={formData.role === "admin"} onChange={handleChange}/> Become admin
         </label>
-        <br /><br />
-        <button type="submit">Register</button>
+        <button type="submit" className="btn btn-success">Register</button>
       </form>
     </div>
   );

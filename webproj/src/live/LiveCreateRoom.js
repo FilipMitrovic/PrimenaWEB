@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizService from "../services/quizService";
 import { createRoom, on } from "../services/liveService";
+import "./LiveCreateRoom.css";
 
 const LiveCreateRoom = () => {
   const nav = useNavigate();
@@ -20,14 +21,12 @@ const LiveCreateRoom = () => {
         const list = await quizService.getAllQuizzes();
         setQuizzes(list);
         if (list.length > 0) setQuizId(list[0].id);
-      } catch (e) {
-        console.error(e);
+      } catch {
         alert("Ne mogu da učitam listu kvizova.");
       }
     })();
   }, []);
 
-  // slušaj RoomUpdated nakon kreiranja sobe
   useEffect(() => {
     const off = on("RoomUpdated", (snap) => setSnapshot(snap));
     return off;
@@ -46,8 +45,7 @@ const LiveCreateRoom = () => {
     try {
       const res = await createRoom(quizId, questionTimeSec);
       setRoomCode(res?.roomCode || "");
-    } catch (e) {
-      console.error(e);
+    } catch {
       alert("Kreiranje sobe nije uspelo.");
     } finally {
       setLoading(false);
@@ -55,17 +53,13 @@ const LiveCreateRoom = () => {
   }
 
   return (
-    <div style={{ maxWidth: 680, margin: "2rem auto", padding: 16 }}>
-      <h2>Live Quiz Arena – Kreiranje sobe (Admin)</h2>
+    <div className="livecreate-container">
+      <h2>Live Quiz Arena – Create room (Admin)</h2>
 
-      <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
+      <div className="livecreate-form">
         <label>
-          Kviz:
-          <select
-            value={quizId}
-            onChange={(e) => setQuizId(e.target.value)}
-            style={{ marginLeft: 8 }}
-          >
+          Quiz:
+          <select value={quizId} onChange={(e) => setQuizId(e.target.value)}>
             {quizzes.map((q) => (
               <option key={q.id} value={q.id}>
                 {q.title} ({q.category}) – {q.difficulty}
@@ -75,42 +69,40 @@ const LiveCreateRoom = () => {
         </label>
 
         <label>
-          Vreme po pitanju (sek):
+          Time per question (sec):
           <input
             type="number"
             min={5}
             max={300}
             value={questionTimeSec}
             onChange={(e) => setQuestionTimeSec(e.target.value)}
-            style={{ marginLeft: 8, width: 100 }}
           />
         </label>
 
         <button onClick={handleCreate} disabled={loading}>
-          {loading ? "Kreiram..." : "Kreiraj sobu"}
+          {loading ? "Kreiram..." : "Create room"}
         </button>
       </div>
 
       {roomCode && (
-        <div style={{ marginTop: 24, padding: 12, border: "1px solid #ddd", borderRadius: 8 }}>
+        <div className="livecreate-roominfo">
           <div>
             <strong>Šifra sobe:</strong> <code>{roomCode}</code>
-            <button
-              style={{ marginLeft: 8 }}
-              onClick={() => navigator.clipboard.writeText(roomCode)}
-            >
-              Kopiraj
+            <button onClick={() => navigator.clipboard.writeText(roomCode)}>
+              Copy
             </button>
           </div>
 
           <div style={{ marginTop: 12 }}>
-            <button onClick={() => nav(`/live/arena/${roomCode}`)}>Otvori arenu</button>
+            <button onClick={() => nav(`/live/arena/${roomCode}`)}>
+              Open arena
+            </button>
           </div>
 
           {snapshot && (
             <div style={{ marginTop: 12, fontSize: 14, color: "#555" }}>
               <div>QuizId: {snapshot.quizId}</div>
-              <div>Učesnika: {snapshot.leaderboard?.length ?? 0}</div>
+              <div>Participant: {snapshot.leaderboard?.length ?? 0}</div>
               <div>Status: {snapshot.isRunning ? "Pokrenut" : "Čeka start"}</div>
             </div>
           )}

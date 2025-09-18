@@ -1,25 +1,26 @@
-// src/Leaderboard.js
+
 import React, { useEffect, useState } from "react";
 import resultService from "./services/resultService";
 import quizService from "./services/quizService";
+import "./Leaderboard.css";
 
 const Leaderboard = () => {
   const [quizzes, setQuizzes] = useState([]);
-  const [quizId, setQuizId] = useState(""); // izabrani kviz
+  const [quizId, setQuizId] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [period, setPeriod] = useState("all"); // all | week | month
+  const [period, setPeriod] = useState("all");
 
   const currentUser = localStorage.getItem("userName");
 
-  // Učitaj sve kvizove da korisnik može da bira
+  // Učitaj sve kvizove
   useEffect(() => {
     (async () => {
       try {
         const data = await quizService.getAllQuizzes();
         setQuizzes(data || []);
         if (data?.length > 0) {
-          setQuizId(data[0].id); // default prvi kviz
+          setQuizId(data[0].id);
         }
       } catch (err) {
         console.error("Failed to fetch quizzes:", err);
@@ -27,7 +28,7 @@ const Leaderboard = () => {
     })();
   }, []);
 
-  // Učitaj rezultate kad se promeni kviz ili period
+  // Učitaj rezultate
   useEffect(() => {
     if (!quizId) return;
 
@@ -37,7 +38,6 @@ const Leaderboard = () => {
         const res = await resultService.getResultsByQuiz(quizId);
         let data = res || [];
 
-        // filtriraj po periodu
         if (period !== "all") {
           const now = new Date();
           let fromDate = null;
@@ -51,7 +51,6 @@ const Leaderboard = () => {
           data = data.filter((r) => new Date(r.takenAt) >= fromDate);
         }
 
-        // sortiranje: po procentu pa po vremenu
         const sorted = data.sort((a, b) => {
           if (b.scorePercent !== a.scorePercent)
             return b.scorePercent - a.scorePercent;
@@ -68,15 +67,15 @@ const Leaderboard = () => {
     })();
   }, [quizId, period]);
 
-  if (loading) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (loading) return <div className="leaderboard-container">Loading...</div>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="leaderboard-container">
       <h2>Leaderboard</h2>
 
       {/* Filteri */}
-      <div style={{ marginBottom: 16 }}>
-        <label style={{ marginRight: 8 }}>Quiz: </label>
+      <div className="leaderboard-filters">
+        <label>Quiz: </label>
         <select value={quizId} onChange={(e) => setQuizId(e.target.value)}>
           {quizzes.map((q) => (
             <option key={q.id} value={q.id}>
@@ -85,7 +84,7 @@ const Leaderboard = () => {
           ))}
         </select>
 
-        <label style={{ marginLeft: 16, marginRight: 8 }}>Period: </label>
+        <label>Period: </label>
         <select value={period} onChange={(e) => setPeriod(e.target.value)}>
           <option value="all">All time</option>
           <option value="week">Last 7 days</option>
@@ -96,11 +95,7 @@ const Leaderboard = () => {
       {results.length === 0 ? (
         <p>No results yet for this filter.</p>
       ) : (
-        <table
-          border="1"
-          cellPadding="6"
-          style={{ borderCollapse: "collapse", width: "100%" }}
-        >
+        <table className="leaderboard-table">
           <thead>
             <tr>
               <th>Position</th>
@@ -117,10 +112,9 @@ const Leaderboard = () => {
             {results.map((r, idx) => (
               <tr
                 key={r.id}
-                style={{
-                  background:
-                    r.userName === currentUser ? "lightblue" : "white",
-                }}
+                className={
+                  r.userName === currentUser ? "leaderboard-highlight" : ""
+                }
               >
                 <td>{idx + 1}</td>
                 <td>{r.userName || r.userId}</td>

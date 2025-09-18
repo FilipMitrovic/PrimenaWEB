@@ -1,13 +1,13 @@
-﻿// Models/LiveModels.cs
+﻿
 using System.Collections.Concurrent;
 
 namespace webproj1.Models.Live
 {
     public enum LiveQuestionState
     {
-        Waiting,     // pre starta kviza ili između pitanja
-        Running,     // pitanje je aktivno
-        Finished     // kviz gotov
+        Waiting,     
+        Running,     
+        Finished     
     }
 
     public class LiveParticipant
@@ -72,6 +72,7 @@ namespace webproj1.Models.Live
         public LiveQuestionState State { get; set; }
         public int QuestionTimeSec { get; set; }
         public DateTime? QuestionStartUtc { get; set; }
+        public string AdminUserId { get; set; }
         public List<LeaderboardRowDTO> Leaderboard { get; set; } = new();
     }
 }

@@ -1,0 +1,65 @@
+.leaderboard-container {
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f2f5, #ffffff);
+    font-family: Arial, sans-serif;
+  }
+  
+  .leaderboard-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .leaderboard-filters {
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .leaderboard-filters label {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .leaderboard-filters select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 16px;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .leaderboard-table thead {
+    background: #343a40;
+    color: #fff;
+  }
+  
+  .leaderboard-table tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .leaderboard-table tr:hover {
+    background: #f1f1f1;
+  }
+  
+  .leaderboard-highlight {
+    background: #cce5ff !important;
+    font-weight: bold;
+  }
+  

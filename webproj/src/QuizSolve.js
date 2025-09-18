@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
 import { getQuestionsByQuiz } from "./services/questionService";
 import resultService from "./services/resultService";
+import "./QuizSolve.css";
 
 const STORAGE_KEY = "kvizhub_attempts_v1";
 
@@ -111,7 +112,7 @@ const QuizSolve = () => {
     return { correct, total, percent };
   };
 
-  // čuvanje pokušaja u localStorage
+  // čuvanje pokušaja
   const saveAttemptToLocalStorage = (sc, endedAtIso, resultId) => {
     try {
       const prev = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
@@ -136,7 +137,7 @@ const QuizSolve = () => {
       }
 
       const attempt = {
-        resultId, // direktna veza sa backend rezultatom
+        resultId,
         quizId: Number(quizId),
         quizTitle: quiz?.title || `Quiz #${quizId}`,
         takenAt: endedAtIso,
@@ -177,12 +178,12 @@ const QuizSolve = () => {
     }
   };
 
-  if (!quiz) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (!quiz) return <div className="quizsolve-container">Loading...</div>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="quizsolve-container">
       <h2>Solving: {quiz.title}</h2>
-      <p>
+      <p className="timer">
         Time left: <strong>{remaining}s</strong>
       </p>
 
@@ -191,24 +192,14 @@ const QuizSolve = () => {
           {(questions || []).map((q, idx) => {
             const type = (q.type || "").toLowerCase();
             return (
-              <div
-                key={q.id}
-                style={{
-                  border: "1px solid #ddd",
-                  padding: 12,
-                  marginBottom: 12,
-                }}
-              >
-                <div style={{ fontWeight: "bold", marginBottom: 8 }}>
-                  {idx + 1}. {q.text}
+              <div key={q.id} className="question-card">
+                <div>
+                  <strong>{idx + 1}. {q.text}</strong>
                 </div>
 
                 {type === "single" &&
                   (q.options || []).map((opt) => (
-                    <label
-                      key={opt.id}
-                      style={{ display: "block", cursor: "pointer" }}
-                    >
+                    <label key={opt.id}>
                       <input
                         type="radio"
                         name={`q_${q.id}`}
@@ -225,10 +216,7 @@ const QuizSolve = () => {
                       Array.isArray(answers[q.id]) &&
                       answers[q.id].includes(opt.id);
                     return (
-                      <label
-                        key={opt.id}
-                        style={{ display: "block", cursor: "pointer" }}
-                      >
+                      <label key={opt.id}>
                         <input
                           type="checkbox"
                           checked={!!selected}
@@ -274,13 +262,8 @@ const QuizSolve = () => {
             );
           })}
 
-          <button onClick={handleSubmit}>Finish</button>
-          <button
-            style={{ marginLeft: 8 }}
-            onClick={() => navigate(`/quizzes/${quizId}`)}
-          >
-            Cancel
-          </button>
+          <button className="btn btn-success" onClick={handleSubmit}>Finish</button>
+          <button className="btn btn-danger" onClick={() => navigate(`/quizzes/${quizId}`)}>Cancel</button>
         </>
       ) : (
         <>
@@ -317,16 +300,9 @@ const QuizSolve = () => {
             return (
               <div
                 key={q.id}
-                style={{
-                  border: "1px solid #ddd",
-                  marginBottom: 10,
-                  padding: 10,
-                  background: isCorrect ? "#d4edda" : "#f8d7da",
-                }}
+                className={`review-card ${isCorrect ? "correct" : "wrong"}`}
               >
-                <div style={{ fontWeight: "bold" }}>
-                  {idx + 1}. {q.text}
-                </div>
+                <div><strong>{idx + 1}. {q.text}</strong></div>
                 <div>
                   <strong>Your answer:</strong>{" "}
                   {(() => {
@@ -359,7 +335,7 @@ const QuizSolve = () => {
             );
           })}
 
-          <button onClick={() => navigate(`/quizzes/${quizId}`)}>
+          <button className="btn btn-info" onClick={() => navigate(`/quizzes/${quizId}`)}>
             Back to quiz
           </button>
         </>

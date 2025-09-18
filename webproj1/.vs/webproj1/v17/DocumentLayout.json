@@ -3,44 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,14 +15,6 @@
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\resultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\iresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\iresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\quizserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\quizserivce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,28 +23,56 @@
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\optionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\optionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\livequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\livemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\ilivequizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\iresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\iresultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\interfaces\\iquizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,6 +87,58 @@
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:interfaces\\ioptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\quizconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\quizconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\questionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\questionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\optionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\optionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:hubs\\livequizhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\quizdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\createresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\resultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -115,48 +151,12 @@
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:controllers\\optioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\services\\optionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:services\\optionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\questionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\questionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\optionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\optionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|c:\\users\\filip\\desktop\\primenawebprojekat\\webproj1\\infrastructure\\configurations\\quizconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC04A1F-F26E-41D0-81FF-94082C912F7A}|webproj1.csproj|solutionrelative:infrastructure\\configurations\\quizconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -166,7 +166,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,320 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
-              "RelativeDocumentMoniker": "Startup.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
-              "RelativeToolTip": "Startup.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAwwCgAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:44:19.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ILiveQuizService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ILiveQuizService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
-              "RelativeToolTip": "Interfaces\\ILiveQuizService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:43:29.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LiveQuizHub.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
-              "RelativeDocumentMoniker": "Hubs\\LiveQuizHub.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
-              "RelativeToolTip": "Hubs\\LiveQuizHub.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAA4wKYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:42:37.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LiveQuizService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
-              "RelativeDocumentMoniker": "Services\\LiveQuizService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
-              "RelativeToolTip": "Services\\LiveQuizService.cs",
-              "ViewState": "AQIAAAIBAAAAAAAAAAAIwBUBAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:40:36.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LiveModels.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
-              "RelativeDocumentMoniker": "Models\\LiveModels.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
-              "RelativeToolTip": "Models\\LiveModels.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwEEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:38:35.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IResultService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IResultService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IResultService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IResultService.cs",
-              "RelativeToolTip": "Interfaces\\IResultService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:23:22.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ResultController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\ResultController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ResultController.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\ResultController.cs",
-              "RelativeToolTip": "Controllers\\ResultController.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAqwEsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:24:32.146Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAwD0AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:03:28.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAowDIAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:05:17.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Result.cs",
-              "RelativeDocumentMoniker": "Models\\Result.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Result.cs",
-              "RelativeToolTip": "Models\\Result.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:19:44.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "QuestionService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuestionService.cs",
-              "RelativeDocumentMoniker": "Services\\QuestionService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuestionService.cs",
-              "RelativeToolTip": "Services\\QuestionService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwEEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:10:26.644Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "QuizDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\QuizDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\QuizDTO.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\QuizDTO.cs",
-              "RelativeToolTip": "Dto\\QuizDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:13:52.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ResultDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\ResultDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\ResultDTO.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\ResultDTO.cs",
-              "RelativeToolTip": "Dto\\ResultDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:20:05.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\UserDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\UserDTO.cs",
-              "RelativeToolTip": "Dto\\UserDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:22:21.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Quiz.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Quiz.cs",
-              "RelativeDocumentMoniker": "Models\\Quiz.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Quiz.cs",
-              "RelativeToolTip": "Models\\Quiz.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:11:36.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Mapping\\MappingProfile.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAwAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:28:01.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Dto\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
-              "RelativeToolTip": "Dto\\LoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:41:42.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateResultDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\CreateResultDTO.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
-              "RelativeToolTip": "Dto\\CreateResultDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T15:47:29.12Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "QuizSerivce.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuizSerivce.cs",
-              "RelativeDocumentMoniker": "Services\\QuizSerivce.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuizSerivce.cs",
-              "RelativeToolTip": "Services\\QuizSerivce.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAlwBUAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:32:27.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ResultService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\ResultService.cs",
-              "RelativeDocumentMoniker": "Services\\ResultService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\ResultService.cs",
-              "RelativeToolTip": "Services\\ResultService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAD4v0EAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:22:49.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "OptionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\OptionDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\OptionDTO.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\OptionDTO.cs",
-              "RelativeToolTip": "Dto\\OptionDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:14:35.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IQuizService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuizService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IQuizService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuizService.cs",
-              "RelativeToolTip": "Interfaces\\IQuizService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:19:11.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IQuestionService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuestionService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IQuestionService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuestionService.cs",
-              "RelativeToolTip": "Interfaces\\IQuestionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:07:32.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IOptionService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IOptionService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IOptionService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IOptionService.cs",
-              "RelativeToolTip": "Interfaces\\IOptionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:07:50.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IUser.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IUser.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUser.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IUser.cs",
-              "RelativeToolTip": "Interfaces\\IUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:02:13.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "QuestionConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuestionConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuestionConfiguration.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuestionConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Configurations\\QuestionConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:24:41.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Option.cs",
               "RelativeDocumentMoniker": "Models\\Option.cs",
@@ -511,71 +198,155 @@
               "RelativeToolTip": "Models\\Option.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:12:22.019Z"
+              "WhenOpened": "2025-09-08T18:12:22.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 11,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Question.cs",
               "RelativeDocumentMoniker": "Models\\Question.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Question.cs",
               "RelativeToolTip": "Models\\Question.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:12:04.078Z"
+              "WhenOpened": "2025-09-08T18:12:04.078Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "QuizController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuizController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuizController.cs",
-              "RelativeToolTip": "Controllers\\QuizController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwCcAAABPAAAA",
+              "DocumentIndex": 9,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Quiz.cs",
+              "RelativeDocumentMoniker": "Models\\Quiz.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Quiz.cs",
+              "RelativeToolTip": "Models\\Quiz.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:28:57.634Z"
+              "WhenOpened": "2025-09-08T18:11:36.53Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "QuestionController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuestionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuestionController.cs",
-              "RelativeToolTip": "Controllers\\QuestionController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDIAAAAJAAAA",
+              "DocumentIndex": 8,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "Models\\Result.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Result.cs",
+              "RelativeToolTip": "Models\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:10:49.515Z"
+              "WhenOpened": "2025-09-12T10:19:44.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "OptionController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\OptionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OptionController.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\OptionController.cs",
-              "RelativeToolTip": "Controllers\\OptionController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAQwD4AAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:14:32.963Z"
+              "WhenOpened": "2025-09-06T12:28:06.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 6,
+              "Title": "LiveQuizService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
+              "RelativeDocumentMoniker": "Services\\LiveQuizService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\LiveQuizService.cs",
+              "RelativeToolTip": "Services\\LiveQuizService.cs",
+              "ViewState": "AQIAABsBAAAAAAAAAAAgwF0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:40:36.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "OptionService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\OptionService.cs",
               "RelativeDocumentMoniker": "Services\\OptionService.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\OptionService.cs",
               "RelativeToolTip": "Services\\OptionService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAIwD0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T13:14:12.558Z"
+              "WhenOpened": "2025-09-11T13:14:12.558Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 4,
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuestionService.cs",
+              "RelativeDocumentMoniker": "Services\\QuestionService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuestionService.cs",
+              "RelativeToolTip": "Services\\QuestionService.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAmwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T13:10:26.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuizSerivce.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuizSerivce.cs",
+              "RelativeDocumentMoniker": "Services\\QuizSerivce.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\QuizSerivce.cs",
+              "RelativeToolTip": "Services\\QuizSerivce.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAA0wBUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:32:27.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResultService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\ResultService.cs",
+              "RelativeDocumentMoniker": "Services\\ResultService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\ResultService.cs",
+              "RelativeToolTip": "Services\\ResultService.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAcwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:22:49.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:03:28.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAUwCgAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:44:19.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\Login.cs",
               "RelativeDocumentMoniker": "Models\\Login.cs",
@@ -583,23 +354,155 @@
               "RelativeToolTip": "Models\\Login.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T15:42:35.056Z"
+              "WhenOpened": "2025-09-06T15:42:35.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "DocumentIndex": 13,
+              "Title": "LiveModels.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
+              "RelativeDocumentMoniker": "Models\\LiveModels.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Models\\LiveModels.cs",
+              "RelativeToolTip": "Models\\LiveModels.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAYwEUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:28:06.124Z"
+              "WhenOpened": "2025-09-16T14:38:35.073Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 14,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Mapping\\MappingProfile.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:28:01.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ILiveQuizService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ILiveQuizService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\ILiveQuizService.cs",
+              "RelativeToolTip": "Interfaces\\ILiveQuizService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwAMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:43:29.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUser.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IUser.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUser.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IUser.cs",
+              "RelativeToolTip": "Interfaces\\IUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:02:13.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IResultService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IResultService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IResultService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IResultService.cs",
+              "RelativeToolTip": "Interfaces\\IResultService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:23:22.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IQuizService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuizService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IQuizService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuizService.cs",
+              "RelativeToolTip": "Interfaces\\IQuizService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:19:11.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IQuestionService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuestionService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IQuestionService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IQuestionService.cs",
+              "RelativeToolTip": "Interfaces\\IQuestionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T13:07:32.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IOptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IOptionService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IOptionService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Interfaces\\IOptionService.cs",
+              "RelativeToolTip": "Interfaces\\IOptionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T13:07:50.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:27:44.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "QuizConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuizConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuizConfiguration.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuizConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Configurations\\QuizConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:22:32.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "QuestionConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuestionConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuestionConfiguration.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuestionConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Configurations\\QuestionConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:24:41.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "OptionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\OptionConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configurations\\OptionConfiguration.cs",
@@ -607,11 +510,168 @@
               "RelativeToolTip": "Infrastructure\\Configurations\\OptionConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:25:43.948Z"
+              "WhenOpened": "2025-09-08T18:25:43.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LiveQuizHub.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\LiveQuizHub.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Hubs\\LiveQuizHub.cs",
+              "RelativeToolTip": "Hubs\\LiveQuizHub.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwKYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:42:37.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\UserDTO.cs",
+              "RelativeToolTip": "Dto\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:22:21.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ResultDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\ResultDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\ResultDTO.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\ResultDTO.cs",
+              "RelativeToolTip": "Dto\\ResultDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:20:05.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "QuizDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\QuizDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\QuizDTO.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\QuizDTO.cs",
+              "RelativeToolTip": "Dto\\QuizDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:13:52.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OptionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\OptionDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\OptionDTO.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\OptionDTO.cs",
+              "RelativeToolTip": "Dto\\OptionDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:14:35.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateResultDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\CreateResultDTO.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\CreateResultDTO.cs",
+              "RelativeToolTip": "Dto\\CreateResultDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T15:47:29.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Dto\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Dto\\LoginDto.cs",
+              "RelativeToolTip": "Dto\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T15:41:42.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-06T12:05:17.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ResultController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\ResultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ResultController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\ResultController.cs",
+              "RelativeToolTip": "Controllers\\ResultController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T10:24:32.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "QuizController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuizController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuizController.cs",
+              "RelativeToolTip": "Controllers\\QuizController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAA5wCcAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T18:28:57.634Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
+              "Title": "QuestionController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuestionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\QuestionController.cs",
+              "RelativeToolTip": "Controllers\\QuestionController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T13:10:49.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "OptionController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\OptionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OptionController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Controllers\\OptionController.cs",
+              "RelativeToolTip": "Controllers\\OptionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T13:14:32.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -623,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -632,30 +692,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-10T17:14:20.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "QuizConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuizConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\QuizConfiguration.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\QuizConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Configurations\\QuizConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T18:22:32.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\PrimenaWebProjekat\\webproj1\\Infrastructure\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T12:27:44.35Z"
             }
           ]
         }

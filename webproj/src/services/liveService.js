@@ -1,8 +1,8 @@
-// src/services/liveService.js
+
 import * as signalR from "@microsoft/signalr";
 
 let connection = null;
-const handlers = {}; // { eventName: Set<callbacks> }
+const handlers = {}; 
 let startPromise = null;
 
 function getToken() {
@@ -12,7 +12,9 @@ function getToken() {
 function emit(event, payload) {
   if (!handlers[event]) return;
   for (const cb of handlers[event]) {
-    try { cb(payload); } catch {}
+    try {
+      cb(payload);
+    } catch {}
   }
 }
 
@@ -42,8 +44,12 @@ export async function connect() {
     connection.on("QuestionStarted", (q, snapshot) =>
       emit("QuestionStarted", { question: q, snapshot })
     );
-    connection.on("QuestionEnded", (snapshot) => emit("QuestionEnded", snapshot));
-    connection.on("LeaderboardUpdated", (snapshot) => emit("LeaderboardUpdated", snapshot));
+    connection.on("QuestionEnded", (snapshot) =>
+      emit("QuestionEnded", snapshot)
+    );
+    connection.on("LeaderboardUpdated", (snapshot) =>
+      emit("LeaderboardUpdated", snapshot)
+    );
     connection.on("AnswerResult", (res) => emit("AnswerResult", res));
     connection.on("QuizEnded", (snapshot) => emit("QuizEnded", snapshot));
 
@@ -59,12 +65,20 @@ export async function connect() {
 // Public API
 export async function createRoom(quizId, questionTimeSec = 30) {
   await connect();
-  return await connection.invoke("AdminCreateRoom", Number(quizId), Number(questionTimeSec));
+  return await connection.invoke(
+    "AdminCreateRoom",
+    Number(quizId),
+    Number(questionTimeSec)
+  );
 }
 
 export async function joinRoom(roomCode, displayName) {
   await connect();
-  return await connection.invoke("JoinRoom", String(roomCode), String(displayName || ""));
+  return await connection.invoke(
+    "JoinRoom",
+    String(roomCode),
+    String(displayName || "")
+  );
 }
 
 export async function leaveRoom(roomCode) {
@@ -81,6 +95,7 @@ export async function nextQuestion(roomCode) {
   await connect();
   return await connection.invoke("NextQuestion", String(roomCode));
 }
+
 
 export async function submitAnswer(roomCode, answerDto) {
   await connect();

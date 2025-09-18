@@ -1,7 +1,8 @@
-// src/CreateQuiz.js
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizService from "./services/quizService";
+import "./QuizForm.css";
 
 const CreateQuiz = () => {
   const navigate = useNavigate();
@@ -26,11 +27,8 @@ const CreateQuiz = () => {
         category: quiz.category,
         difficulty: quiz.difficulty,
         timeLimit: Number(quiz.timeLimit),
-        questions: [], // <<< ključna izmena
+        questions: [],
       };
-
-      console.log("TOKEN:", localStorage.getItem("token"));
-      console.log("Sending payload:", payload);
 
       await quizService.createQuiz(payload);
       navigate("/quizzes");
@@ -41,7 +39,7 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="quizform-container">
       <h2>Create Quiz</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -64,7 +62,11 @@ const CreateQuiz = () => {
           onChange={handleChange}
           placeholder="Category"
         />
-        <select name="difficulty" value={quiz.difficulty} onChange={handleChange}>
+        <select
+          name="difficulty"
+          value={quiz.difficulty}
+          onChange={handleChange}
+        >
           <option value="">Select difficulty</option>
           <option value="easy">easy</option>
           <option value="medium">medium</option>

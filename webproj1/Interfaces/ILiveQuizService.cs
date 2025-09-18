@@ -1,9 +1,9 @@
-﻿// Interfaces/ILiveQuizService.cs
+﻿
 using webproj1.Models.Live;
-using webproj1.Dto;          // koristiš postojeći QuestionDTO/OptionDTO
-using webproj1.Dto;          // QuizDTO
-using webproj1.Dto;          // ResultDTO (ako bude trebalo)
-using webproj1.Dto;          // CreateResultDTO (ako bude trebalo)
+using webproj1.Dto;         
+using webproj1.Dto;         
+using webproj1.Dto;          
+using webproj1.Dto;          
 
 namespace webproj1.Interfaces
 {

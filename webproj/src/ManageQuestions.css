@@ -1,0 +1,115 @@
+.manage-container {
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    font-family: Arial, sans-serif;
+  }
+  
+  .manage-container h2 {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .manage-back {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .manage-back:hover {
+    background: #0056b3;
+  }
+  
+  .manage-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .manage-form input,
+  .manage-form select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .manage-form button {
+    padding: 6px 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .manage-form button:hover {
+    background: #218838;
+  }
+  
+  .manage-question-card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .manage-question-card strong {
+    color: #343a40;
+  }
+  
+  .manage-question-card button {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  
+  .manage-question-card button:first-of-type {
+    background: #17a2b8;
+    color: white;
+  }
+  
+  .manage-question-card button:first-of-type:hover {
+    background: #117a8b;
+  }
+  
+  .manage-question-card button:last-of-type {
+    background: red;
+    color: white;
+    margin-left: 8px;
+  }
+  
+  .manage-question-card button:last-of-type:hover {
+    background: darkred;
+  }
+  
+  .manage-options {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+  
+  .manage-options li {
+    margin-bottom: 4px;
+  }
+  
+  .manage-options button {
+    background: #dc3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .manage-options button:hover {
+    background: darkred;
+  }
+  

@@ -1,7 +1,8 @@
-// src/QuizResults.js
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import resultService from "./services/resultService";
+import "./QuizResults.css";
 
 const QuizResults = () => {
   const { id: quizId } = useParams();
@@ -22,21 +23,17 @@ const QuizResults = () => {
     })();
   }, [quizId]);
 
-  if (loading) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (loading) return <div className="quizresults-container">Loading...</div>;
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="quizresults-container">
       <h2>
         Results for {results[0]?.quizTitle || `Quiz #${quizId}`}
       </h2>
       {results.length === 0 ? (
-        <p>No results found for this quiz.</p>
+        <p className="quizresults-empty">No results found for this quiz.</p>
       ) : (
-        <table
-          border="1"
-          cellPadding="6"
-          style={{ borderCollapse: "collapse", width: "100%" }}
-        >
+        <table className="quizresults-table">
           <thead>
             <tr>
               <th>User</th>

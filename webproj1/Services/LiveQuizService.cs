@@ -93,6 +93,7 @@ namespace webproj1.Services
                 State = room.State,
                 QuestionTimeSec = room.QuestionTimeSec,
                 QuestionStartUtc = room.QuestionStartUtc,
+                AdminUserId = room.AdminUserId,
                 Leaderboard = room.Scores
                     .Select(kv =>
                     {

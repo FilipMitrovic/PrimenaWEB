@@ -1,0 +1,131 @@
+.livearena-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .livearena-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .livearena-question {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .livearena-question p {
+    margin: 6px 0;
+  }
+  
+  .livearena-timer {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .livearena-timer.red {
+    color: red;
+  }
+  
+  .livearena-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .livearena-options.row {
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .livearena-options button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .livearena-options button:hover {
+    background: #0056b3;
+  }
+  
+  .livearena-feedback {
+    margin-top: 12px;
+    font-weight: bold;
+  }
+  
+  .livearena-feedback.correct {
+    color: green;
+  }
+  
+  .livearena-feedback.incorrect {
+    color: red;
+  }
+  
+  .livearena-leaderboard {
+    margin-top: 24px;
+  }
+  
+  .livearena-leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .livearena-leaderboard th,
+  .livearena-leaderboard td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .livearena-leaderboard th {
+    background: #343a40;
+    color: white;
+    text-align: left;
+  }
+  
+  .livearena-leaderboard tr:nth-child(even) {
+    background: #f8f9fa;
+  }
+  
+  .livearena-fill {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .livearena-fill input {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .livearena-fill button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #20c997;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .livearena-fill button:hover {
+    background: #198754;
+  }
+  

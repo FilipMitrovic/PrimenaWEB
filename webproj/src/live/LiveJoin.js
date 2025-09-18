@@ -1,6 +1,7 @@
 // src/pages/LiveJoin.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LiveJoin.css";
 
 const LiveJoin = () => {
   const [roomCode, setRoomCode] = useState("");
@@ -12,37 +13,26 @@ const LiveJoin = () => {
       alert("Unesi room kod i svoje ime!");
       return;
     }
-
-    // sačuvaj ime da ga Arena koristi za joinRoom
     localStorage.setItem("liveDisplayName", displayName);
-
-    // prebaci u arenu (joinRoom se zove tek tamo)
     navigate(`/live/arena/${roomCode}`);
   };
 
   return (
-    <div style={{ maxWidth: 500, margin: "2rem auto", textAlign: "center" }}>
-      <h2>Pridruži se sobi</h2>
+    <div className="livejoin-container">
+      <h2>Join room</h2>
       <input
         placeholder="Room code"
         value={roomCode}
         onChange={(e) => setRoomCode(e.target.value)}
-        style={{ margin: "8px", padding: "8px" }}
       />
       <br />
       <input
-        placeholder="Tvoje ime"
+        placeholder="Your name"
         value={displayName}
         onChange={(e) => setDisplayName(e.target.value)}
-        style={{ margin: "8px", padding: "8px" }}
       />
       <br />
-      <button
-        style={{ background: "#20c997", color: "white", padding: "6px 12px" }}
-        onClick={handleJoin}
-      >
-        Join
-      </button>
+      <button onClick={handleJoin}>Join</button>
     </div>
   );
 };

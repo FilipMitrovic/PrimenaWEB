@@ -17,7 +17,7 @@ Aplikacija je razvijena kao troslojna web aplikacija:
 
 - **Frontend (React):** Podeljen na komponente, koristi servise za HTTP pozive, .env za konfiguraciju.
 - **Backend (ASP.NET Core Web API):** Troslojna arhitektura (Controllers → Services → Repositories), sa Dependency Injection.
-- **Baza podataka (SQL Server):** Definisana preko EF Core migracija.
+- **Baza podataka (SQL Server):** Definisana preko migracija.
 
 ## Pokretanje projekta
 
@@ -27,6 +27,22 @@ Aplikacija je razvijena kao troslojna web aplikacija:
 3. Pritisnuti run
 ### Frontend
 1. npm start
+
+### 5. Funkcionalnosti
+### Korisnik
+- Registracija i prijava
+- Pregled i rešavanje kvizova
+- Pregled ličnih rezultata
+- Globalna rang lista
+- Učešće u Live Quiz Areni
+
+### Administrator
+- CRUD nad kvizovima i pitanjima
+- Pregled rezultata
+- Kreiranje i upravljanje Live sobama
+
+## Autor
+Filip Mitrović, PR142/2021
 
 
 
